@@ -6,8 +6,8 @@
   "scripts": {
     "prestart": "npm install",
     "postinstall": "node ./node_modules/bower/bin/bower install",
-    "dev": "nodemon server/app",
-    "start": "node server/app"
+    "dev": "nodemon app",
+    "start": "node app"
   },
   "keywords": [],
   "author": "",
