@@ -33,3 +33,10 @@ section.short-padding {
     position: relative;
     display: block;
 }
+
+
+.tokke-message{
+    background: #f8f8f8;
+    border-radius: 0px;
+        padding-left: 1em;
+}
