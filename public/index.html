@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Tokkes</title>
@@ -15,11 +16,9 @@
 </head>
 
 <body class="theme--square" data-reveal-selectors="section:not(.masonry):not(:first-of-type):not(.parallax)">
-   
-      
-<div class="nav-container">
-
-<nav lass="transition--fade">
+    <div class="nav-container">
+        <nav lass="transition--fade">
+            <!-- header nav -->
             <div class="nav-bar" data-fixed-at="700">
                 <div class="nav-module logo-module left">
                     <a href="index.html"><img alt="logo" class="logo logo-dark" src="img/_tokkes_logo_300px.png"> <img alt="logo" class="logo logo-light" src="img/logo-light.png"></a>
@@ -88,7 +87,7 @@
                             </li>
                     </ul>
                 </div>
-                                <div class="nav-module right">
+                <div class="nav-module right">
                     <a href="#" class="nav-function" data-notification-link="cart-overview">
                         <i class="interface-bag icon icon--sm"></i>
                         <span>Cart</span>
@@ -101,13 +100,12 @@
                     </a>
                 </div>
             </div>
-             <!--end nav bar-->
+            <!--end nav bar-->
             <div class="nav-mobile-toggle visible-sm visible-xs">
                 <i class="icon-Align-JustifyAll icon icon--sm"></i>
             </div>
-</nav>
-
- <div class="notification pos-right pos-top cart-overview" data-notification-link="cart-overview" data-animation="from-right">
+        </nav>
+        <div class="notification pos-right pos-top cart-overview" data-notification-link="cart-overview" data-animation="from-right">
             <div class="cart-overview__title">
                 <h5>Your Cart</h5>
             </div>
@@ -148,10 +146,8 @@
                     </span>
                 </a>
             </div>
-</div>
-
-
-<div class="modal-container search-modal" data-modal-id="search-form">
+        </div>
+        <div class="modal-container search-modal" data-modal-id="search-form">
             <div class="modal-content bg-white imagebg" data-width="100%" data-height="100%">
                 <div class="pos-vertical-center clearfix">
                     <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
@@ -165,17 +161,11 @@
                 </div>
             </div>
             <!--end of modal-content-->
-</div>
-<!--end of modal-container-->
-
-
-</div>
-
-
-
-
+        </div>
+        <!--end of modal-container-->
+    </div>
     <div class="main-container">
-        <section class="imagebg videobg height-100 cover cover-4 parallax" data-overlay="4">
+        <section class="imagebg videobg height-100 cover cover-4 parallax" data-overlay="0">
             <video autoplay loop muted>
                 <source src="video/video.webm" type="video/webm">
                 <source src="video/video.mp4" type="video/mp4">
@@ -537,12 +527,12 @@
                         <div class="feature feature-2">
                             <div class="feature__title">
                                 <i class="icon icon-A-Z"></i>
-                                <h6>CONSULA TODA LA LISTA</h6>
+                                <h6>CONSULTA TODA LA LISTA</h6>
                             </div>
                             <p>
                                 Every one of Pillar’s stylish blocks are fully responsive,meaning that your site shines - regardless of the device your users are viewing from.
                             </p>
-                                <button class="btn"> ver lista de teléfons compatibles</button>
+                            <button class="btn"> ver lista de teléfons compatibles</button>
                         </div>
                     </div>
                     <div class="col-md-5 col-sm-6">
@@ -554,17 +544,30 @@
                             <p>
                                 Each purchase of Pillar comes with six months of our much-lauded customer support. We have our own dedicated support forum setup to help you.
                             </p>
-                            <form>
-
-                                <input type="" name="marca del móvil" placeholder="Marca"> 
-                             
-                                
-                                        
-                            <a class="btn btn--primary" href="page-utility-results-tokkes.html">
-                                <span class="btn__text">buscar</span>
+                        </div>
+                        <!--  search mobile compatiblity with Tøkkes-->
+                        <form action="" method="POST" class="form-inline" role="form">
+                            <input type="text" id="phoneBrand_input" name="marca del móvil" placeholder="Marca">
+                            <input type="text" id="phoneModel_input" name="modelo del móvil" placeholder="Modelo">
+                            <!--  button search mobile compatiblity-->
+                            <button id="phoneBrand_button" type="submit" data-modal-id="1" class="btn btn-primary modal-trigger">Buscar móvil</button>
+                            <a class="btn modal-trigger " id="phoneBrand_button" href="#">
+                                <span class="btn__text">
+                                        More Info
+                                    </span>
                             </a>
-                       
-                            </form>
+                        </form>
+                        <!-- window modal -->
+                        <div class="modal-container modal-instance modal-close" data-modal-id="1">
+                            <div class="modal-content bg-white imagebg card card-1" data-width="80%" data-height="70%">
+                                <div class="pos-vertical-center clearfix">
+                                    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
+                                        <ul id="list-phone-group">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of window modal-->
                         </div>
                     </div>
                     <div class="col-sm-12">
@@ -756,6 +759,52 @@
     </footer>
     </div>
     <script src="js/jquery-2.1.4.min.js"></script>
+    <!-- ajax request -->
+    <!-- https://fonoapi.freshpixl.com/v1/getdevice?token=1c7b29cd95da5b687c206483bef8e8e64da31257abe9755f&device=n&<!-- brand=samsung
+ -->
+    <script type="text/javascript">
+    $('#phoneBrand_button').on('click', function(e) {
+        e.preventDefault()
+        var queryModelPhone = $('#phoneModel_input').val();
+        var queryPhone = $('#phoneBrand_input').val();
+        var token = '1c7b29cd95da5b687c206483bef8e8e64da31257abe9755f';
+
+
+        console.log(queryPhone)
+        var urlPhone = 'https://fonoapi.freshpixl.com/v1/getdevice?token=' + token + '&device=' + queryModelPhone + '&brand=' + queryPhone
+
+        $.ajax({
+            url: urlPhone,
+            success: function(data) {
+                var nameBrand = data
+                var haveNFC = ''
+                var noHaveNFC = ''
+
+
+                nameBrand.forEach(function(phoneName) {
+
+                    if (phoneName.nfc === 'Yes' && !phoneName.DeviceName.includes("apple")) {
+                        noHaveNFC += '<li> El teléfono <br>' + phoneName.DeviceName + ' no es compatible con Tøkkes </li>'
+                    } else if (phoneName.nfc === 'NFC') {
+                        haveNFC += '<li> Enhorabuena, su teléfono<br> ' + phoneName.DeviceName + ' es compatible con Tøkkes </li>'
+
+                    } else {
+                        noHaveNFC += '<li> Su teléfono<br>' + phoneName.DeviceName + ' no es compatible con Tøkkes </li>'
+                    }
+
+                    $("#list-phone-group").html(haveNFC + noHaveNFC)
+
+
+
+                })
+
+            }
+
+        })
+    })
+    </script>
+    <!-- end ajax request
+ -->
     <script src="js/isotope.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/scrollreveal.min.js"></script>
