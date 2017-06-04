@@ -2,6 +2,11 @@
 Add your custom styles below
 ****************************/
 
+
+/** {
+ border: 1px solid red; }
+}*/
+
 .but_pad_0 {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -39,4 +44,9 @@ section.short-padding {
     background: #f8f8f8;
     border-radius: 0px;
         padding-left: 1em;
+}
+
+
+.btn + .btn {
+    margin-left: 0px;
 }
