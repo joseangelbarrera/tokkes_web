@@ -532,7 +532,9 @@
                             <p>
                                 Every one of Pillar’s stylish blocks are fully responsive,meaning that your site shines - regardless of the device your users are viewing from.
                             </p>
-                            <button class="btn"> ver lista de teléfons compatibles</button>
+                            <a class="btn" href="list_compatible_devices_tokkes.html">
+                                <span class="btn__text">ver lista de teléfonos compatibles</span>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-5 col-sm-6">
@@ -551,11 +553,6 @@
                             <input type="text" id="phoneModel_input" name="modelo del móvil" placeholder="Modelo">
                             <!--  button search mobile compatiblity-->
                             <button id="phoneBrand_button" type="submit" data-modal-id="1" class="btn btn-primary modal-trigger">Buscar móvil</button>
-                            <a class="btn modal-trigger " id="phoneBrand_button" href="#">
-                                <span class="btn__text">
-                                        More Info
-                                    </span>
-                            </a>
                         </form>
                         <!-- window modal -->
                         <div class="modal-container modal-instance modal-close" data-modal-id="1">
@@ -631,7 +628,7 @@
                         <h4>Presentaciones especial regalo.</h4>
                     </div>
                     <div class="col-sm-4">
-                        <a href="#">
+                        <a href="tokkes_comprar-eassy-pack-4.html">
                             <div class="shop-item shop-item-1">
                                 <div class="shop-item__price hover--reveal">
                                     <span class="type--strikethrough">27 €</span>
@@ -647,7 +644,7 @@
                         </a>
                     </div>
                     <div class="col-sm-4">
-                        <a href="#">
+                        <a href="tokkes_comprar-eassy-pack-8.html">
                             <div class="shop-item shop-item-1">
                                 <div class="shop-item__price hover--reveal">
                                     <span class="type--strikethrough">54 €</span>
@@ -663,7 +660,7 @@
                         </a>
                     </div>
                     <div class="col-sm-4">
-                        <a href="#">
+                        <a href="tokkes_comprar-caja-12.html">
                             <div class="shop-item shop-item-1">
                                 <div class="shop-item__price hover--reveal">
                                     <span class="type--strikethrough">100 €</span>
@@ -760,8 +757,6 @@
     </div>
     <script src="js/jquery-2.1.4.min.js"></script>
     <!-- ajax request -->
-    <!-- https://fonoapi.freshpixl.com/v1/getdevice?token=1c7b29cd95da5b687c206483bef8e8e64da31257abe9755f&device=n&<!-- brand=samsung
- -->
     <script type="text/javascript">
     $('#phoneBrand_button').on('click', function(e) {
         e.preventDefault()
@@ -780,7 +775,6 @@
                 var haveNFC = ''
                 var noHaveNFC = ''
 
-
                 nameBrand.forEach(function(phoneName) {
 
                     if (phoneName.nfc === 'Yes' && !phoneName.DeviceName.includes("apple")) {
@@ -794,12 +788,8 @@
 
                     $("#list-phone-group").html(haveNFC + noHaveNFC)
 
-
-
                 })
-
             }
-
         })
     })
     </script>
