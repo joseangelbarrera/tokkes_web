@@ -117,7 +117,7 @@ contact_call: String, "Llamada a un contacto"
 police_call: String, "Llamada a la Policia"
 firemans_call: String, "Llamada a los Bomberos"
 hospital_call: String, "Llamada al Hospital"
-gender_violence: String, "V"iolencia de Género"
+gender_violence: String, "Violencia de Género"
 
 contact_sms: String, "SMS a un contacto"
 contact_whatsapp: String, "Whatsapp a un contacto"
