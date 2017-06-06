@@ -530,7 +530,7 @@
                             <input type="text" id="phoneBrand_input" name="marca del móvil" placeholder="Marca">
                             <input type="text" id="phoneModel_input" name="modelo del móvil" placeholder="Modelo">
                             <!--  button search mobile compatiblity-->
-                            <button id="phoneBrand_button" type="submit" data-modal-id="1" class="btn btn-primary modal-trigger">Buscar móvil</button>
+<button id="phoneBrand_button" type="submit" data-modal-id="1" class="btn btn-primary modal-trigger">Buscar móvil</button>
                         </form>
                         <!-- window modal -->
                         <div class="modal-container modal-instance modal-close" data-modal-id="1">
@@ -741,7 +741,6 @@
         var queryModelPhone = $('#phoneModel_input').val();
         var queryPhone = $('#phoneBrand_input').val();
         var token = '1c7b29cd95da5b687c206483bef8e8e64da31257abe9755f';
-
 
         console.log(queryPhone)
         var urlPhone = 'https://fonoapi.freshpixl.com/v1/getdevice?token=' + token + '&device=' + queryModelPhone + '&brand=' + queryPhone

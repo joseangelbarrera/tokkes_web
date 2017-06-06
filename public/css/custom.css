@@ -3,77 +3,129 @@ Add your custom styles below
 ****************************/
 
 
-/** {
- border: 1px solid red; }
+* {
+    border: 1px solid red;
 }
-*/
+
+
+
+}
+.colorBlue {
+    background: blue;
+}
+.colorGreen {
+    background: green;
+}
+#QuestionOptionsTwo {
+    margin-bottom: 20px;
+}
 .but_pad_0 {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
-
 .shadow_price:hover {
     box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25);
 }
-
 .btn--primary.btn:hover {
     background-color: RoyalBlue;
     border-color: RoyalBlue;
     /*    border: 0px*/
 }
-
 section.short-padding {
     padding-top: 2em;
     padding-bottom: 0.125em;
 }
-
 .boxed {
     position: relative;
     overflow: hidden;
     padding: 2.4375em;
     margin-bottom: 0px;
 }
-
 .modal-instance {
     position: relative;
     display: block;
 }
 
-
-
-
-.btn + .btn {
+/*.btn + .btn {
     margin-left: 0px;
-}
-
+}*/
 select,
 option {
     background: #f8f8f8;
-  color: black;
-  border-radius: 0px;
-  font-family: arial;
-  padding-right: 15px;
+    color: black;
+    border-radius: 0px;
+    font-family: arial;
+    padding-right: 15px;
 }
-
-
-#origin-phone, #destination-phone, #message-to-send {
+#origin-msg-phone,
+#destination-msg-phone,
+#origin-phone,
+#destination-phone,
+#message-to-send {
     background: #f8f8f8;
-  color: black;
-  border-radius: 0px;
-  font-family: arial;
-  padding-right: 15px;
-   width: 100%;
-
+    color: black;
+    border-radius: 0px;
+    font-family: arial;
+    padding-right: 15px;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
-
 .smartphone-4:before {
     content: "\ea90";
 }
-
 .input-with-icon label + i {
-    top: 80px;
+    top: 66px;
 }
 
+/* For mobile phones: */
+@media (max-width: 400px) {
+    .input-with-icon label + i {
+        top: 58px;
+    }
+}
+@media (max-width: 700px) {
+    .input-with-icon label + i {
+        top: 58px;
+    }
+}
+@media (max-width: 950px) {
+    .input-with-icon label + i {
+        top: 63px;
+    }
+}
 .second_action {
     padding-top: 20px;
+}
+.btn-danger {
+    color: #ffffff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+#config_button {
+    display: flex;
+    margin-top: 10px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    align-items: stretch;
+}
+#config_button_1 {
+    background: #e7e7e7;
+    flex-grow: 1;
+    color: grey;
+    border: 0px;
+    width: 50%;
+}
+#config_button_2 {
+    background: #e7e7e7;
+    flex-grow: 1;
+    color: grey;
+    border: 0px;
+    width: 50%;
+}
+@media all and (max-width: 767px) {
+    #config_button_2 {
+        margin-left: 0;
+        margin-top: 0px;
+    }
 }
