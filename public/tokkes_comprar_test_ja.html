@@ -25,7 +25,7 @@
                         </div>
                         <div class="card__body boxed bg--white modal-instance">
                             <div class="card__title ">
-                                <h4>Configuralo a tu gusto.</h4>
+                                <h4>Configúralo a tu gusto.</h4>
                             </div>
                             <p>
                             Configura este Tøkke a tu medida. Es ideal para regalar a tus seres querido y que sepan que pueden contactar contigo en caso de necesidad.
@@ -51,7 +51,7 @@
                                                             <!--  First question -->
                                                             <div id="myQuestions">
                                                                         <p>1º ¿Qué quieres que haga este Tøkke?</p>
-                                                                        <select id="QuestionOptions" class="selectpicker">
+                                                                        <select id="QuestionOptions">
                                                                             <option class="text-center" selected disabled> <strong> SELECCIONA UNA ACCIÓN </strong></option> 
                                                                             <option value="A">REALIZAR UNA LLAMADA</option>
                                                                             <option value="B">ENVIAR UN MENSAJE</option>
@@ -164,8 +164,8 @@
     $(function () {
      $('#QuestionOptions').change(function () {
         $('#myAnswers > div').hide();
-        #question = this
         $('#myAnswers').find('#' + $(this).val()).show();
+        console.log(this)
         });
        });
 
