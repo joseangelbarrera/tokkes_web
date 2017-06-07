@@ -11,33 +11,33 @@ mongoose.connect(DB_URL);
 const Player = require('./models/Player');
 const User = require('./models/User')
 
-// var alex = new User({
-//     username: "alex"
-// });
+var alex = new User({
+    username: "alex"
+});
 
-// var joe = new User({
-//     username: "joe"
-// })
+var joe = new User({
+    username: "joe"
+})
 
-// alex.save();
-// joe.save();
+alex.save();
+joe.save();
 
-// console.log ( joe._id )
-// console.log ( joe._id.toString() )
-// console.log ( new mongoose.mongo.ObjectId( joe._id.toString() )  )
+console.log ( joe._id )
+console.log ( joe._id.toString() )
+console.log ( new mongoose.mongo.ObjectId( joe._id.toString() )  )
 
-// var messi = new Player({
-//     name: "messi",
-//     owner: new mongoose.mongo.ObjectId( alex._id.toString() )
-// });
+var messi = new Player({
+    name: "messi",
+    owner: new mongoose.mongo.ObjectId( alex._id.toString() )
+});
 
-// var cristiano = new Player({
-//     name: "cristiano",
-//     owner: new mongoose.mongo.ObjectId( joe._id.toString() )
-// })
+var cristiano = new Player({
+    name: "cristiano",
+    owner: new mongoose.mongo.ObjectId( joe._id.toString() )
+})
 
-// messi.save();
-// cristiano.save();
+messi.save();
+cristiano.save();
 
  Player.find()
     .populate('owner')

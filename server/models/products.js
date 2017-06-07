@@ -7,13 +7,20 @@ var productSchema = new Schema({
         type: String,
         required: true
     },
-    color: String,
-    shape: String,
     description: String,
     price: Number,
     image: String,
-    units: Number
+    imageLow: String,
+    type: {
+        single: {
+            color: String,
+            shape: String,
+        },
+        box: {
+            units: [ { type: Schema.Types.ObjectId, ref: 'Product' }, ]        
+        }
+    }
 }, { collection })
 
-const product = mongoose.model('product', productSchema);
+const product = mongoose.model('Product', productSchema);
 module.exports = product
