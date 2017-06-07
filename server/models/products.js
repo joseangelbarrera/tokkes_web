@@ -1,19 +1,19 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
+const collection = "products"
 
 var productSchema = new Schema({
-    id: String,
-    name: String,
-    color: Number,
-    shape: String,
-    type: String,
-    price: Number
-    currency: {
+    name: {
         type: String,
-        default: "euro"
+        required: true
     },
-    image: String
-})
+    color: String,
+    shape: String,
+    description: String,
+    price: Number,
+    image: String,
+    units: Number
+}, { collection })
 
 const product = mongoose.model('product', productSchema);
 module.exports = product
