@@ -14,34 +14,35 @@
 </head>
 
 <body class="theme--square" data-reveal-selectors="section:not(.masonry):not(:first-of-type):not(.parallax)">
-
     <div class="main-container transition--fade">
-
-        <section class="imagebg image--light height-60" data-overlay="1">
+        <section class="imagebg image--light height-100" data-overlay="1">
             <div class="background-image-holder background--top">
-                <img alt="image" src="img/header_pack_12_tokkes.jpg" />
+                <img class="img_hidden" alt="image" src="img/header_pack_12_tokkes.jpg" />
             </div>
             <div class="container pos-vertical-center">
-                <div class="col-sm-10 col-sm-offset-1 text-center">
-                    <h1>Caja Love 12 Tøkkes</h1>
-                    <p class="lead">
-                        Con Tøkkes las personas mayores o los niños víctimas de un accidente en el hogar no necesitan desbloquear el móvil o buscar un número para pedir ayuda.&nbsp;
-                    </p>
+                <div class="col-sm-10 text-center box-header">
+                    <h1>Tøkkes Box Love</h1>
                     <a class="btn" href="shop-cart-tokkes.html">
-                        <span class="btn__text">PREORDENAR</span>
+                        <span class="btn__text">PREORDENAR POR SOLO 35 EUROS </span>
                     </a>
                 </div>
                 <!--end row-->
             </div>
             <!--end container-->
         </section>
+        <section class="short_margin_black">
+            <div class="container pos-vertical-center">
+                <div class="col-sm-10 col-sm-offset-1 text-center">
+                    <p class="lead">
+                        Con Tøkkes las personas mayores o los niños víctimas de un accidente en el hogar no necesitan desbloquear el móvil o buscar un número para pedir ayuda.&nbsp;
+                    </p>
+                </div>
+            </div>
+        </section>
         <section>
-            
-
-<div class="container sheets">
-
-<!--- tokke Red -->
-            <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="container sheets">
+                <!--- tokke Red -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="card card-1 shadow_price">
                         <div class="card__image">
                             <img alt="Pic" src="img/rojo_tokke.png">
@@ -49,8 +50,8 @@
                         <div class="card__body boxed bg--white modal-instance">
                             <div class="card__title ">
                                 <h4>Llamada al Servicio 112</h4>
-                                  <div>
-                                   <h5>(Sugerencia de uso)<h5>
+                                <div>
+                                    <h5>(Sugerencia de uso)<h5>
                                   </div>
                             </div>
                             <p class="short_margin">
@@ -459,6 +460,17 @@
                     </div>
             </div>
 <!--- End tokke Green -->
+
+    <!--     preorder call -->
+    <section class="short_margin">
+     <div class="container pos-vertical-center">
+            <div class="col-sm-12 text-center pos-vertical-center">
+                <p class="lead">
+                    Recurda: Configura los 12 Tøkkes del Box Love y luego haz la preorden.
+                </p>
+            </div>
+        </div>
+    </section>
 
 <!--- tokke blue -->
             <div class="col-lg-4 col-md-6 col-sm-6">
@@ -1301,6 +1313,18 @@
             </div>
 <!--- End tokke heart white -->
 
+    <!--     preorder call -->
+    <section class="short_margin">
+     <div class="container pos-vertical-center">
+            <div class="col-sm-12 text-center pos-vertical-center">
+                <p class="lead">
+                    Recurda: Configura los 12 Tøkkes del Box Love y luego haz la preorden.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
 <!--- tokke heart white -->
             <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="card card-1 shadow_price">
@@ -1722,7 +1746,7 @@
 <!--- End tokke yellow soft -->
 
 <!--- tokke green soft -->
-            <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="col-lg-4 col-lg-offset-2 col-md-6 col-sm-6">
                     <div class="card card-1 shadow_price">
                         <div class="card__image">
                             <img alt="Pic" src="img/jade_tokke.png">
@@ -2000,18 +2024,73 @@
                     </div>
             </div>
 <!--- End tokke blue soft -->
-
+ </div>
+</section>
+<section>
+ <div class="container pos-vertical-center">
+        <div class="col-sm-10 col-sm-offset-1 text-center">
+            <p class="lead">
+                Configura los 12 Tøkkes del Box Love y haz la preorden al acabar.&nbsp;.
+            </p>
+            <a class="btn" href="shop-cart-tokkes.html">
+                <span class="btn__text">PREORDENAR BOX LOVE DE 12 TØKKES</span>
+            </a>
+        </div>
+    </div>
+</section>
 </div>
 
-        </section>
 
 
-    </div>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/scrollreveal.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/scripts.js"></script>
 
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/scrollreveal.min.js"></script>
-    <script src="js/parallax.js"></script>
-    <script src="js/scripts.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+    $('#QuestionOptionsRed').change(function () {
+    $('#myAnswersRed > div').hide();
+    $('#myAnswersRed').find('#' + $(this).val()).show();
+    console.log(this)
+    });
+    });
+
+    $(function () {
+    $('#QuestionOptionsYellow').change(function () {
+    $('#myAnswersYellow > div').hide();
+    $('#myAnswersYellow').find('#' + $(this).val()).show();
+    console.log(this)
+    });
+    });
+
+    $(function () {
+    $('#QuestionOptionsGreen').change(function () {
+    $('#myAnswersGreen > div').hide();
+    $('#myAnswersGreen').find('#' + $(this).val()).show();
+    console.log(this)
+    });
+    });
+
+    $(function () {
+    $('#QuestionOptions').change(function () {
+    $('#myAnswers > div').hide();
+    $('#myAnswers').find('#' + $(this).val()).show();
+    console.log(this)
+    });
+    });
+
+    $(function () {
+    $('#QuestionOptions2').change(function () {
+    $('#myAnswers2 > div').hide();
+    $('#myAnswers2').find('#' + $(this).val()).show();
+    console.log(this)
+    });
+    });
+
+
+</script>
 </body>
 
 </html>
