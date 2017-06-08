@@ -6,8 +6,8 @@ Add your custom styles below
 /** {
     border: 1px solid red;
 }
-*/
 
+*/
 
 }
 .colorBlue {
@@ -179,7 +179,3 @@ section.short_margin_visible {
 
 
 
-.box-header {
-    width: 100%;
-    height: 150PX;
-}

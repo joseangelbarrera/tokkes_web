@@ -42,3 +42,26 @@ https://thawing-bastion-81148.herokuapp.com/img/product_models/model_15_t%C3%B8k
 
 https://thawing-bastion-81148.herokuapp.com/img/product_models/model_16_t%C3%B8kke_easy_pack_8.png
 https://thawing-bastion-81148.herokuapp.com/img/product_models/model_16_t%C3%B8kke_easy_pack_8_low.png
+
+// Export DB from mongo local
+mongoexport -d demoProducts -c products -o products.json
+
+// Import db to mongo local
+mongoimport -d demoProducts -c roducts --file products.json
+
+// Import DB to mLab
+mongoimport -h ds115352.mlab.com:15352 -d tokkes-products -c products -u admin -p 100 --file products.json
+
+// Set heroku DB_URI
+mongodb://admin:100@ds115352.mlab.com:15352/tokkes-products
+
+user: admin
+pass: 100
+
+
+To connect using the mongo shell:
+mongo ds115352.mlab.com:15352/tokkes-products -u admin -p 100
+
+To connect using a driver via the standard MongoDB URI (what's this?):
+mongodb://<dbuser>:<dbpassword>@ds115352.mlab.com:15352/tokkes-products
+

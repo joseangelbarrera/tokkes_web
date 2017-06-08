@@ -6,7 +6,6 @@ const path = require('path')
 // mongoose.connect(DB_URI)
 const app = express()
 
-
 // const DB_URI=mongodb://localhost:27017/test
 
 if (process.env.NODE_ENV !== 'production') {
