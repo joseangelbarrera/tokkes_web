@@ -1,3 +1,5 @@
+db.products.find({ $where : "this.type.box.units.length === 4" }).count()
+
 
 
 # TØKKES README TEST

@@ -1,0 +1,95 @@
+.col-lg-4.col-md-6.col-sm-6
+	.card.card-1.shadow_price
+		.card__image
+			img(alt='Pic', src='/img/rojo_tokke.png')
+		.card__body.boxed.bg--white.modal-instance
+			.card__title
+				h4 Llamada al Servicio 112
+				div
+					h5
+						| (Sugerencia de uso)
+						h5
+			p.short_margin
+				| Te sugerimos configurar el Tøkke rojo para llamar al teléfono de emergencias 112 al instante. Pero puedes confirurarlo como deees.
+			a.btn.btn--success.center-block.modal-trigger.btn-block(href='#')
+				span.btn__text
+					| Configurar
+			#config_button.text-center.top.btn-block
+				button#config_button_1.btn.btn-danger.btn-lg(type='button')  - borrar
+				button#config_button_2.btn.btn-primary.btn-lg(type='button')  + añadir
+			// trigger
+			.modal-container
+				.modal-content(class='data-width=', data-height='85%', height--natural='')
+					.boxed.boxed--lg.bg--white.box-shadow-wide
+						.subscribe__title.text-center
+							h4 Configuración Tøkke Rojo
+						form
+							// First question
+							#myQuestions
+								p 1º ¿Qué quieres que haga este Tøkke?
+								select#QuestionOptionsRed
+									option.text-center(selected='', disabled='')
+										strong  SELECCIONA UNA ACCIÓN
+									option(value='A') REALIZAR UNA LLAMADA
+									option(value='B') ENVIAR UN MENSAJE
+							// End first question
+							//
+								trigger to rhe Question
+							#myAnswersRed
+								// Question when answer the first one with make a call
+								#A(style='display: none;')
+									p.second_action 2º ¿Dónde quieres llamar?
+									#QuestionD.input-with-icon.dropdown
+										select#QuestionOptionsTwo
+											option.text-center(selected='', disabled='')  SELECCIONA AQUÍ DÓNDE LLAMAR
+											option(value='112_call') LLAMADA DE URGENCIA (ej.112)
+											option(value='contact_call') LLAMADA A UN CONTACTO
+											option(value='police_call') LLAMADA A LA POLICIA
+											option(value='firemans_call') LLAMADA A LOS BOMBEROS
+											option(value='hospital_call') LLAMADA AL HOSPITAL
+											option(value='gender_violence') SOS VIOLENCIA DE GENERO
+										.input-with-icon
+											p 3º ¿Desde qué teléfono se llamará?
+											label(for='origin-phone')
+											i.icon-Phone-Wifi
+											input#origin-phone.tokke-message(name='origin-phone', type='tel', pattern='[0-9]{9}', required='', placeholder='Escribe aquí el número de teléfono de origen')
+										.input-with-icon
+											p 4º ¿A qué número de teléfono se llamará?
+											label(for='destination-phone')
+											i.icon-Smartphone-4
+											input#destination-phone(name='destination-phone', type='tel', pattern='[0-9]{9}', required='', placeholder='Escribe aquí el número el teléfono de destino')
+										.text-center
+											p.text-left 5º Guarda para seguir configurando todos los Tøkkes que desees pre-ordenar.
+											button.btn.btn-danger(type='button', href='#')
+												| cancel
+											button.btn.btn-primary(type='submit', href='#')
+												| guardar
+								// End of question
+								// Question after answer the first one with send a message
+								#B.colorBlue(style='display: none;')
+									p.second_action 2º ¿Qué tipo de mensaje quieres enviar?
+									select#QuestionOptionsTwo
+										option.text-center(selected='', disabled='')  SELECCIONA UN TIPO DE MENSAJE
+										option(value='contact_sms') SMS A UN CONTACTO
+										option(value='contact_whatsapp') WHATSAPP A UN CONTACTO
+									.input-with-icon
+										p 3º ¿Desde qué número se enviará el mensaje?
+										label(for='origin-phone')
+										i.icon-Phone-Wifi
+										input#origin-msg-phone.tokke-message(name='origin-msg-phone', type='tel', pattern='[0-9]{9}', required='', placeholder='Escribe aquí el número del teléfono de origen')
+									.input-with-icon
+										p 4º ¿A qué teléfono se enviará el mensaje
+										label(for='destination-phone')
+										i.icon-Smartphone-4
+										input#destination-msg-phone(name='destination-msg-phone', type='tel', required='', placeholder='Escribe el teléfono de destino')
+									.input-with-icon
+										p 5º ¿Cuál es el mensaje que deseas enviar?
+										label(for='message-to-send')
+										i.icon.normal-text
+										textarea#message-to-send.validate-required(maxlength='140', x4='', name='message-to-send', type='text', required='', placeholder='Mensaje a enviar. Máximo 160 caracteres contando espacios.')
+									.text-center
+										p.text-left 6º Guarda para seguir configurando todos los Tøkkes que desees pre-ordenar.
+										button.btn.btn-danger(type='button', href='#')
+											| cancel
+										button.btn.btn-primary(type='submit', href='#')
+											| guardar

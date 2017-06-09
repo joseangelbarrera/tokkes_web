@@ -8,9 +8,18 @@ var productSchema = new Schema({
         required: true
     },
     description: String,
+    defaultFunction: String,
+    kindFunction: String,
+    txtToSell: String,
     price: Number,
+    sellingSingleOption: {
+        type: Boolean,
+        default: true
+    },
+    imageBackground: String,
     image: String,
     imageLow: String,
+
     type: {
         single: {
             color: String,

@@ -1,0 +1,21 @@
+extends ../../layout.pug
+
+block content
+	body.theme--square(data-reveal-selectors="section:not(.masonry):not(:first-of-type):not(.parallax)")
+		.main-container.transition--fade
+			include includes/header.pug
+			section
+				.container.sheets
+
+					each tokke in tokkes 
+						include includes/singleTokkeRepeat.pug
+
+			section
+				.container.pos-vertical-center
+					.col-sm-10.col-sm-offset-1.text-center
+						p.lead
+							| Configura los Tøkkes a tu gusto. Puedes añadir tantos Tøkkes como desees y borrar los que no quieras.
+							| Al finalizar de configurarlos haz la preorden.
+						|
+						a.btn(href="shop-cart-tokkes.html")
+							span.btn__text PREORDENAR BOX LOVE DE 12 TØKKES
