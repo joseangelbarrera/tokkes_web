@@ -26,6 +26,8 @@
 
 <div class="container sheets">
 
+
+
 <!--- tokke Red -->
             <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="card card-1 shadow_price">
@@ -42,44 +44,182 @@
                             <p class="short_margin">
                            Te sugerimos configurar el Tøkke rojo para llamar al teléfono de emergencias 112 al instante. Pero puedes confirurarlo como deees.
                             </p>
-                            <div class="modal-instance">
-                            <a id="border-radius-active-1" class="btn btn-success modal-trigger btn-block" data-modal-index="1" href="#">
+                            
+                            <a id="border-radius-active-1" class="btn btn-success btn-block" href="#">
                             <span class="btn__text text-center">
-                                modal 1
+                                Configurar llamada
                             </span>
                             </a>
-                            </div>
-                        <div class="modal-instance">
-                             <a id="config_button0" class=" btn btn-info modal-trigger btn-block" data-modal-index="2"  href="#">
+                         
+                             <a class=" btn btn-info btn-block" id="config_button0" href="#">
                             <span class="btn__text">
-                                Cmodal 2
+                                Configurar Mensaje
                             </span>
                             </a>
+                            <div id="config_button" class="text-center top btn-block" >
+                              <button id="config_button_1" type="button" class="btn btn-danger btn-lg" > eliminar</button>
+                              <button id="config_button_2" type="button" class="btn btn-primary btn-lg"> duplicar</button>
+                           </div> 
+                        </div>
+                    </div>
+            </div>
+<!--- End tokke Red -->
+
+
+
+
+<!--- tokke Red -->
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="card card-1 shadow_price">
+                        <div class="card__image">
+                            <img alt="Pic" src="img/rojo_tokke.png">
+                        </div>
+                        <div class="card__body boxed bg--white modal-instance">
+                            <div class="card__title ">
+                                <h4>Llamada al Servicio 112</h4>
+                                  <div>
+                                   <h5>(Sugerencia de uso)<h5>
+                                  </div>
                             </div>
-
-
-<div class="modal-container" data-modal-index="1">
-<div class="modal-content bg--white">
-<h3>Configuración Tøkke Rojo llamada 1</h3>
-</div>
-</div>
-
-<div class="modal-container" data-modal-index="2">
-<div class="modal-content bg--white">
-<h3>Configuración Tøkke Rojo mensaje 2</h3>
-</div>
-</div>
-
-
-
+                            <p class="short_margin">
+                           Te sugerimos configurar el Tøkke rojo para llamar al teléfono de emergencias 112 al instante. Pero puedes confirurarlo como deees.
+                            </p>
+                            
+                            <a id="border-radius-active-1" class="btn btn-success modal-trigger btn-block" data-modal-id="phoneCall" href="#">
+                            <span class="btn__text text-center btn-block">
+                                Configurar llamada
+                            </span>
+                            </a>
+                            
+                             <a class=" btn btn-info modal-trigger btn-block" id="config_button0" data-modal-id="message" href="#">
+                            <span class="btn__text btn-block">
+                                Configurar Mensaje
+                            </span>
+                            </a>
+                            
+                           
+                            <div id="config_button" class="text-center top btn-block" >
+                              <button id="config_button_1" type="button" class="btn btn-danger btn-lg" > eliminar</button>
+                              <button id="config_button_2" type="button" class="btn btn-primary btn-lg"> duplicar</button>
+                            </div>
                                 <!--    trigger  -->
-                            <div>
-                                    <div class="modal-content data-width="80%" data-height="85%" height--natural>
+                                    <div class="modal-container" data-modal-id="message">
+                                            <div class="modal-content data-width="80%" data-height="85%" height--natural>
+                                                <div class="boxed boxed--lg bg--white box-shadow-wide">
+                                                <div class="modal-close modal-close-cross"></div>
+                                                    <div class="subscribe__title text-center">
+                                                    <img src="img/product_models/model_03_t%C3%B8kke_red_low.png">
+                                                        <h3>Configuración Tøkke Rojo Mensaje</h3>
+                                                     </div>
+                                                        <form >
+
+                                                            <!--  First question -->
+                                                            <div id="myQuestions">
+                                                                        <p>1º ¿Qué quieres que haga este Tøkke?</p>
+                                                                        <select id="subtitute" data-questionOptionsRed="tokke._id">
+                                                                            <option class="text-center" selected disabled> <strong> SELECCIONA UNA ACCIÓN </strong></option>
+                                                                            <option value="A">REALIZAR UNA LLAMADA</option>
+                                                                            <option value="B">ENVIAR UN MENSAJE</option>
+                                                                        </select>
+                                                            </div>
+                                                            <!--  End first question -->
+                                                            <!-- trigger to rhe Question
+                                                             --><div data-myAnswersRed="tokke._id">
+                                                                <!--  Question when answer the first one with make a call -->
+                                                                    <div id="A" style="display: none;">
+
+                                                                           <p class="second_action">2º ¿Dónde quieres llamar?</p>
+
+                                                                           <div id="QuestionD" class="input-with-icon  dropdown">
+
+                                                                                <select id="QuestionOptionsTwo">
+                                                                                    <option class="text-center" selected disabled> SELECCIONA AQUÍ TIPO DE LLAMADA </option>
+                                                                                    <option value="112_call">LLAMADA DE URGENCIA (ej.112)</option>
+                                                                                    <option value="contact_call">LLAMADA A UN CONTACTO</option>
+                                                                                    <option value="police_call">LLAMADA A LA POLICIA</option>
+                                                                                    <option value="firemans_call">LLAMADA A LOS BOMBEROS</option>
+                                                                                    <option value="hospital_call">LLAMADA AL HOSPITAL</option>
+                                                                                    <option value="gender_violence">SOS VIOLENCIA DE GENERO</option>
+                                                                                </select>
+
+                                                                                <div class="input-with-icon">
+                                                                                    <p>3º ¿Desde qué teléfono se llamará?</p>
+                                                                                    <label for="origin-phone"></label>
+                                                                                    <i class=" icon-Phone-Wifi"></i>
+                                                                                    <input class="tokke-message" id="origin-phone" name="origin-phone" type="tel" pattern="[0-9]{9}" required placeholder="Escribe aquí el número de teléfono de origen">
+                                                                                </div>
+
+                                                                                <div class="input-with-icon">
+                                                                                    <p>4º ¿A qué número de teléfono se llamará?</p>
+                                                                                    <label for="destination-phone"></label>
+                                                                                    <i class="icon-Smartphone-4"></i>
+                                                                                    <input id="destination-phone" name="destination-phone" type="tel" pattern="[0-9]{9}" required placeholder="Escribe aquí el número el teléfono de destino" />
+                                                                                </div>
+
+                                                                              <div class="text-center">
+                                                                                <p class="text-left">5º Guarda y sigue configurando tus Tøkkes.</p>
+                                                                                <div id="config_button" class="text-center top btn-block modal-close" >
+                                                                                <button id="config_button_1" type="button" class="btn btn-danger btn-lg" > Cancelar</button>
+                                                                                <button id="config_button_3" type="button" href="#" class="btn btn-primary btn-lg"> guardar</button>
+                                                                                </div>
+                                                                              </div>
+
+                                                                            </div>
+                                                                    </div>
+                                                                <!--  End of question -->
+                                                                <!--  Question after answer the first one with send a message -->
+                                                                    <div id="B" style="display: none;" class="colorBlue">
+
+                                                                            <p class="second_action">2º ¿Qué tipo de mensaje quieres enviar?</p>
+
+                                                                            <select id="QuestionOptionsTwo">
+                                                                                <option class="text-center" selected disabled> SELECCIONA UN TIPO DE MENSAJE </option>
+                                                                                <option value="contact_sms">SMS A UN CONTACTO</option>
+                                                                                <option value="contact_whatsapp">WHATSAPP A UN CONTACTO</option>
+                                                                            </select>
+
+                                                                            <div class="input-with-icon">
+                                                                                <p>3º ¿Desde qué número se enviará el mensaje?</p>
+                                                                                <label for="origin-phone"></label>
+                                                                                <i class="icon-Phone-Wifi"></i>
+                                                                                <input class="tokke-message" id="origin-msg-phone" name="origin-msg-phone" type="tel" pattern="[0-9]{9}" required placeholder="Escribe aquí el número del teléfono de origen">
+                                                                            </div>
+
+                                                                            <div class="input-with-icon" >
+                                                                                <p>4º ¿A qué teléfono se enviará el mensaje</p>
+                                                                                <label for="destination-phone"></label>
+                                                                                <i class="icon-Smartphone-4"></i>
+                                                                                <input id="destination-msg-phone" name="destination-msg-phone" type="tel" required placeholder="Escribe el teléfono de destino">
+                                                                            </div>
+
+                                                                            <div class="input-with-icon">
+                                                                                <p>5º ¿Cuál es el mensaje que deseas enviar?</p>
+                                                                                <label for="message-to-send"></label>
+                                                                                <i class="icon normal-text"></i>
+                                                                                <textarea class="validate-required" maxlength="140" x4 id="message-to-send" name="message-to-send" type="text" required placeholder="Mensaje a enviar. Máximo 160 caracteres contando espacios."></textarea>
+                                                                            </div>
+
+                                                                            <div class="text-center">
+                                                                                <p class="text-left">6º Guarda y sigue configurando tus Tøkkes.</p>
+                                                                                <div id="config_button" class="text-center top btn-block modal-close" >
+                                                                                <button id="config_button_1" type="button" class="btn btn-danger btn-lg" > Cancelar</button>
+                                                                                <button id="config_button_3" type="button" href="#" class="btn btn-primary btn-lg"> guardar</button>
+                                                                                </div>
+                                                                            </div>
+                                                                    </div>
+                                                                <!--  End of question -->
+                                                                </div>
+                                                        </form>
+                                                 </div>
+                                             </div>
+                                    </div>
+                                    <div class="modal-container" data-modal-id="phoneCall">
+                                     <div class="modal-content data-width="80%" data-height="85%" height--natural>
                                         <div class="boxed boxed--lg bg--white box-shadow-wide">
                                         <div class="modal-close modal-close-cross"></div>
                                             <div class="subscribe__title text-center">
                                             <img src="img/product_models/model_03_t%C3%B8kke_red_low.png">
-                                                <h3>Configuración Tøkke Rojo Mensaje</h3>
+                                                <h3>Configuración Tøkke Rojo llama</h3>
                                              </div>
                                                 <form >
 
@@ -184,124 +324,6 @@
                                          </div>
                                      </div>
                             </div>
-                            <div>
-                             <div class="modal-content data-width="80%" data-height="85%" height--natural>
-                                <div class="boxed boxed--lg bg--white box-shadow-wide">
-                                <div class="modal-close modal-close-cross"></div>
-                                    <div class="subscribe__title text-center">
-                                    <img src="img/product_models/model_03_t%C3%B8kke_red_low.png">
-                                        <h3>Configuración Tøkke Rojo llamada</h3>
-                                     </div>
-                                        <form >
-
-                                            <!--  First question -->
-                                            <div id="myQuestions">
-                                                        <p>1º ¿Qué quieres que haga este Tøkke?</p>
-                                                        <select id="subtitute" data-questionOptionsRed="tokke._id">
-                                                            <option class="text-center" selected disabled> <strong> SELECCIONA UNA ACCIÓN </strong></option>
-                                                            <option value="A">REALIZAR UNA LLAMADA</option>
-                                                            <option value="B">ENVIAR UN MENSAJE</option>
-                                                        </select>
-                                            </div>
-                                            <!--  End first question -->
-                                            <!-- trigger to rhe Question
-                                             --><div data-myAnswersRed="tokke._id">
-                                                <!--  Question when answer the first one with make a call -->
-                                                    <div id="A" style="display: none;">
-
-                                                           <p class="second_action">2º ¿Dónde quieres llamar?</p>
-
-                                                           <div id="QuestionD" class="input-with-icon  dropdown">
-
-                                                                <select id="QuestionOptionsTwo">
-                                                                    <option class="text-center" selected disabled> SELECCIONA AQUÍ TIPO DE LLAMADA </option>
-                                                                    <option value="112_call">LLAMADA DE URGENCIA (ej.112)</option>
-                                                                    <option value="contact_call">LLAMADA A UN CONTACTO</option>
-                                                                    <option value="police_call">LLAMADA A LA POLICIA</option>
-                                                                    <option value="firemans_call">LLAMADA A LOS BOMBEROS</option>
-                                                                    <option value="hospital_call">LLAMADA AL HOSPITAL</option>
-                                                                    <option value="gender_violence">SOS VIOLENCIA DE GENERO</option>
-                                                                </select>
-
-                                                                <div class="input-with-icon">
-                                                                    <p>3º ¿Desde qué teléfono se llamará?</p>
-                                                                    <label for="origin-phone"></label>
-                                                                    <i class=" icon-Phone-Wifi"></i>
-                                                                    <input class="tokke-message" id="origin-phone" name="origin-phone" type="tel" pattern="[0-9]{9}" required placeholder="Escribe aquí el número de teléfono de origen">
-                                                                </div>
-
-                                                                <div class="input-with-icon">
-                                                                    <p>4º ¿A qué número de teléfono se llamará?</p>
-                                                                    <label for="destination-phone"></label>
-                                                                    <i class="icon-Smartphone-4"></i>
-                                                                    <input id="destination-phone" name="destination-phone" type="tel" pattern="[0-9]{9}" required placeholder="Escribe aquí el número el teléfono de destino" />
-                                                                </div>
-
-                                                              <div class="text-center">
-                                                                <p class="text-left">5º Guarda y sigue configurando tus Tøkkes.</p>
-                                                                <div id="config_button" class="text-center top btn-block modal-close" >
-                                                                <button id="config_button_1" type="button" class="btn btn-danger btn-lg" > Cancelar</button>
-                                                                <button id="config_button_3" type="button" href="#" class="btn btn-primary btn-lg"> guardar</button>
-                                                                </div>
-                                                              </div>
-
-                                                            </div>
-                                                    </div>
-                                                <!--  End of question -->
-                                                <!--  Question after answer the first one with send a message -->
-                                                    <div id="B" style="display: none;" class="colorBlue">
-
-                                                            <p class="second_action">2º ¿Qué tipo de mensaje quieres enviar?</p>
-
-                                                            <select id="QuestionOptionsTwo">
-                                                                <option class="text-center" selected disabled> SELECCIONA UN TIPO DE MENSAJE </option>
-                                                                <option value="contact_sms">SMS A UN CONTACTO</option>
-                                                                <option value="contact_whatsapp">WHATSAPP A UN CONTACTO</option>
-                                                            </select>
-
-                                                            <div class="input-with-icon">
-                                                                <p>3º ¿Desde qué número se enviará el mensaje?</p>
-                                                                <label for="origin-phone"></label>
-                                                                <i class="icon-Phone-Wifi"></i>
-                                                                <input class="tokke-message" id="origin-msg-phone" name="origin-msg-phone" type="tel" pattern="[0-9]{9}" required placeholder="Escribe aquí el número del teléfono de origen">
-                                                            </div>
-
-                                                            <div class="input-with-icon" >
-                                                                <p>4º ¿A qué teléfono se enviará el mensaje</p>
-                                                                <label for="destination-phone"></label>
-                                                                <i class="icon-Smartphone-4"></i>
-                                                                <input id="destination-msg-phone" name="destination-msg-phone" type="tel" required placeholder="Escribe el teléfono de destino">
-                                                            </div>
-
-                                                            <div class="input-with-icon">
-                                                                <p>5º ¿Cuál es el mensaje que deseas enviar?</p>
-                                                                <label for="message-to-send"></label>
-                                                                <i class="icon normal-text"></i>
-                                                                <textarea class="validate-required" maxlength="140" x4 id="message-to-send" name="message-to-send" type="text" required placeholder="Mensaje a enviar. Máximo 160 caracteres contando espacios."></textarea>
-                                                            </div>
-
-                                                            <div class="text-center">
-                                                                <p class="text-left">6º Guarda y sigue configurando tus Tøkkes.</p>
-                                                                <div id="config_button" class="text-center top btn-block modal-close" >
-                                                                <button id="config_button_1" type="button" class="btn btn-danger btn-lg" > Cancelar</button>
-                                                                <button id="config_button_3" type="button" href="#" class="btn btn-primary btn-lg"> guardar</button>
-                                                                </div>
-
-                                                            </div>
-                                                    </div>
-                                                <!--  End of question -->
-                                                </div>
-                                        </form>
-                                 </div>
-                             </div>
-                            </div>
-
-
-
-
-
-
-
                                 <!--end trigger-->
                         </div>
                     </div>
@@ -335,112 +357,62 @@
                             </div>
                                 <!--    trigger  -->
                                     <div class="modal-container">
+
+
+
                                             <div class="modal-content data-width="50%" data-height="85%" height--natural>
                                                 <div class="boxed boxed--lg bg--white box-shadow-wide">
                                                     <div class="subscribe__title text-center">
                                                         <h4>Configuración Tøkke Blanco "corazón"</h4>
                                                      </div>
+
+
+
                                                         <form >
+                                                           <p class="second_action">2º ¿Dónde quieres llamar?</p>
 
-                                                            <!--  First question -->
-                                                            <div id="myQuestions">
-                                                                        <p>1º ¿Qué quieres que haga este Tøkke?</p>
-                                                                        <select id="QuestionOptionsYellow">
-                                                                            <option class="text-center" selected disabled> <strong> SELECCIONA UNA ACCIÓN </strong></option>
-                                                                            <option value="A">REALIZAR UNA LLAMADA</option>
-                                                                            <option value="B">ENVIAR UN MENSAJE</option>
-                                                                        </select>
-                                                            </div>
-                                                            <!--  End first question -->
-                                                            <!-- trigger to rhe Question
-                                                             --><div id="myAnswersYellow">
-                                                                <!--  Question when answer the first one with make a call -->
-                                                                    <div id="A" style="display: none;">
+                                                           <div id="QuestionD" class="input-with-icon  dropdown">
 
-                                                                           <p class="second_action">2º ¿Dónde quieres llamar?</p>
+                                                                <select id="QuestionOptionsTwo">
+                                                                    <option class="text-center" selected disabled> SELECCIONA AQUÍ DÓNDE LLAMAR </option>
+                                                                    <option value="112_call">LLAMADA DE URGENCIA (ej.112)</option>
+                                                                    <option value="contact_call">LLAMADA A UN CONTACTO</option>
+                                                                    <option value="police_call">LLAMADA A LA POLICIA</option>
+                                                                    <option value="firemans_call">LLAMADA A LOS BOMBEROS</option>
+                                                                    <option value="hospital_call">LLAMADA AL HOSPITAL</option>
+                                                                    <option value="gender_violence">SOS VIOLENCIA DE GENERO</option>
+                                                                </select>
 
-                                                                           <div id="QuestionD" class="input-with-icon  dropdown">
-
-                                                                                <select id="QuestionOptionsTwo">
-                                                                                    <option class="text-center" selected disabled> SELECCIONA AQUÍ DÓNDE LLAMAR </option>
-                                                                                    <option value="112_call">LLAMADA DE URGENCIA (ej.112)</option>
-                                                                                    <option value="contact_call">LLAMADA A UN CONTACTO</option>
-                                                                                    <option value="police_call">LLAMADA A LA POLICIA</option>
-                                                                                    <option value="firemans_call">LLAMADA A LOS BOMBEROS</option>
-                                                                                    <option value="hospital_call">LLAMADA AL HOSPITAL</option>
-                                                                                    <option value="gender_violence">SOS VIOLENCIA DE GENERO</option>
-                                                                                </select>
-
-                                                                                <div class="input-with-icon">
-                                                                                    <p>3º ¿Desde qué teléfono se llamará?</p>
-                                                                                    <label for="origin-phone"></label>
-                                                                                    <i class=" icon-Phone-Wifi"></i>
-                                                                                    <input class="tokke-message" id="origin-phone" name="origin-phone" type="tel" pattern="[0-9]{9}" required placeholder="Escribe aquí el número de teléfono de origen">
-                                                                                </div>
-
-                                                                                <div class="input-with-icon">
-                                                                                    <p>4º ¿A qué número de teléfono se llamará?</p>
-                                                                                    <label for="destination-phone"></label>
-                                                                                    <i class="icon-Smartphone-4"></i>
-                                                                                    <input id="destination-phone" name="destination-phone" type="tel" pattern="[0-9]{9}" required placeholder="Escribe aquí el número el teléfono de destino" />
-                                                                                </div>
-
-                                                                              <div class="text-center">
-                                                                                <p class="text-left">5º Guarda para seguir configurando todos los Tøkkes que desees pre-ordenar.</p>
-                                                                                 <button type="button" class="btn btn-danger" href="#">cancel
-                                                                                </button>
-                                                                                <button type="submit" class="btn btn-primary" href="#">guardar
-                                                                                </button>
-                                                                              </div>
-
-                                                                            </div>
-                                                                    </div>
-                                                                <!--  End of question -->
-                                                                <!--  Question after answer the first one with send a message -->
-                                                                    <div id="B" style="display: none;" class="colorBlue">
-
-                                                                            <p class="second_action">2º ¿Qué tipo de mensaje quieres enviar?</p>
-
-                                                                            <select id="QuestionOptionsTwo">
-                                                                                <option class="text-center" selected disabled> SELECCIONA UN TIPO DE MENSAJE </option>
-                                                                                <option value="contact_sms">SMS A UN CONTACTO</option>
-                                                                                <option value="contact_whatsapp">WHATSAPP A UN CONTACTO</option>
-                                                                            </select>
-
-                                                                            <div class="input-with-icon">
-                                                                                <p>3º ¿Desde qué número se enviará el mensaje?</p>
-                                                                                <label for="origin-phone"></label>
-                                                                                <i class="icon-Phone-Wifi"></i>
-                                                                                <input class="tokke-message" id="origin-msg-phone" name="origin-msg-phone" type="tel" pattern="[0-9]{9}" required placeholder="Escribe aquí el número del teléfono de origen">
-                                                                            </div>
-
-                                                                            <div class="input-with-icon" >
-                                                                                <p>4º ¿A qué teléfono se enviará el mensaje</p>
-                                                                                <label for="destination-phone"></label>
-                                                                                <i class="icon-Smartphone-4"></i>
-                                                                                <input id="destination-msg-phone" name="destination-msg-phone" type="tel" required placeholder="Escribe el teléfono de destino">
-                                                                            </div>
-
-                                                                            <div class="input-with-icon">
-                                                                                <p>5º ¿Cuál es el mensaje que deseas enviar?</p>
-                                                                                <label for="message-to-send"></label>
-                                                                                <i class="icon normal-text"></i>
-                                                                                <textarea class="validate-required" maxlength="140" x4 id="message-to-send" name="message-to-send" type="text" required placeholder="Mensaje a enviar. Máximo 160 caracteres contando espacios."></textarea>
-                                                                            </div>
-
-                                                                            <div class="text-center">
-                                                                                <p class="text-left">6º Guarda para seguir configurando todos los Tøkkes que desees pre-ordenar.</p>
-                                                                                <button type="button" class="btn btn-danger" href="#">cancel
-                                                                                </button>
-                                                                                <button type="submit" class="btn btn-primary" href="#">guardar
-                                                                                </button>
-                                                                            </div>
-                                                                    </div>
-                                                                <!--  End of question -->
+                                                                <div class="input-with-icon">
+                                                                    <p>3º ¿Desde qué teléfono se llamará?</p>
+                                                                    <label for="origin-phone"></label>
+                                                                    <i class=" icon-Phone-Wifi"></i>
+                                                                    <input class="tokke-message" id="origin-phone" name="origin-phone" type="tel" pattern="[0-9]{9}" required placeholder="Escribe aquí el número de teléfono de origen">
                                                                 </div>
+
+                                                                <div class="input-with-icon">
+                                                                    <p>4º ¿A qué número de teléfono se llamará?</p>
+                                                                    <label for="destination-phone"></label>
+                                                                    <i class="icon-Smartphone-4"></i>
+                                                                    <input id="destination-phone" name="destination-phone" type="tel" pattern="[0-9]{9}" required placeholder="Escribe aquí el número el teléfono de destino" />
+                                                                </div>
+
+                                                              <div class="text-center">
+                                                                <p class="text-left">5º Guarda para seguir configurando todos los Tøkkes que desees pre-ordenar.</p>
+                                                                 <button type="button" class="btn btn-danger" href="#">cancel
+                                                                </button>
+                                                                <button type="submit" class="btn btn-primary" href="#">guardar
+                                                                </button>
+                                                              </div>
+                                                            </div>
                                                         </form>
+
+
                                                  </div>
                                              </div>
+
+
+
                                     </div>
                                 <!--end trigger-->
                         </div>

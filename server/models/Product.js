@@ -29,6 +29,7 @@ var productSchema = new Schema({
             units: [ { type: Schema.Types.ObjectId, ref: 'Product' }, ]        
         }
     }
+
 }, { collection })
 
 const product = mongoose.model('Product', productSchema);

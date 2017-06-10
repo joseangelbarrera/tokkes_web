@@ -1,42 +1,45 @@
+var $testingQuestion = $('select.questionoptionsred').data("questionoptionsred");
+var $testingAnswer = $('div.myanswersred').data("myanswersred");
+
+
+console.log( $testingQuestion)
+console.log($testingAnswer)
+
+
 $(function() {
-	$('#QuestionOptions').change(function() {
-		$('#myAnswers > div').hide();
-		$('#myAnswers').find('#' + $(this).val()).show();
+	$('#'+ $testingQuestion).change(function() {
+		$('#' + $testingAnswer + '> div').hide();
+		$('#' + $testingAnswer).find('#' + $(this).val()).show();
 		console.log(this)
 	});
 });
 
 
+var $testingQuestion = $('select.questionoptionsred').data("questionoptionsred");
+
+composition = function(){
+	var idSelected = "'" + '#'+ $testingQuestion + "'"
+	return idSelected.toString()
+}
+
+console.log(composition())
+
+this works but it is the same for all tokkes cards
+
+
+quiero alcanzar al select con id del tokke que me interesa
 
 $(function() {
-	$('#QuestionOptionsRed').change(function() {
-		$('#myAnswersRed > div').hide();
-		$('#myAnswersRed').find('#' + $(this).val()).show();
+	$('#questionoptions').change(function() {
+		$('#myanswers > div').hide();
+		$('#myanswers').find('#' + $(this).val()).show();
 		console.log(this)
 	});
 });
 
-$(function() {
-	$('#QuestionOptionsYellow').change(function() {
-		$('#myAnswersYellow > div').hide();
-		$('#myAnswersYellow').find('#' + $(this).val()).show();
-		console.log(this)
-	});
-});
-
-$(function() {
-	$('#QuestionOptionsGreen').change(function() {
-		$('#myAnswersGreen > div').hide();
-		$('#myAnswersGreen').find('#' + $(this).val()).show();
-		console.log(this)
-	});
-});
-
-
-$(function() {
-	$('#QuestionOptions2').change(function() {
-		$('#myAnswers2 > div').hide();
-		$('#myAnswers2').find('#' + $(this).val()).show();
+	$('#questionoptions').change(function() {
+		$('#myanswers > div').hide();
+		$('#myanswers').find('#' + $(this).val()).show();
 		console.log(this)
 	});
 });

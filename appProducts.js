@@ -10,6 +10,44 @@ mongoose.connect(DB_URL);
 
 const Product = require('./server/models/Product');
 
+var tokkeYellow = new Product({
+    name: "Tøkke Amarillo",
+    description: "Tøkke NFC sencillo silicona Amarillo. Tamaño 5 x 5.",
+    defaultFunction: "Llamada a Contacto.",
+    kindFunction: "(Sugerencia de uso)",
+    txtToSell: "Puedes configurar el Tøkke Amarillo con el teléfono de la persona a quien llamar en caso de emergencia. Adviértele que vas a hacerlo.",
+    price: 5,
+    sellingSingleOption: true,
+    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/amarillo_tokke.png",
+    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_01_t%C3%B8kke_yellow_soft.png",
+    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_01_t%C3%B8kke_yellow_low.png",
+    type: {
+        single: {
+            color: "Amarillo",
+            shape: "Círculo",
+        },
+    }
+});
+
+var tokkeGreen = new Product({
+    name: "Tøkke Verde",
+       
+    description: "Tøkke NFC sencillo silicona Verde. Tamaño 5 x 5.",
+    defaultFunction: "SMS a un contacto.",
+    kindFunction: "(Sugerencia de uso)",
+    txtToSell: "Hemos elegido el color verde para envíar SMS's en caso de que no puedas hablar. Pero puedes reconfigurarlo a tu gusto.",
+    price: 5,
+    sellingSingleOption: true,
+    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/verde_tokke.png",
+    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_02_t%C3%B8kke_green.png",
+    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_02_t%C3%B8kke_green_low.png",
+    type: {
+        single: {
+            color: "Verde",
+            shape: "Círculo",
+        },
+    }
+});
 
 // creating products variables
 var tokkeRed = new Product({
@@ -50,64 +88,6 @@ var tokkeBlue = new Product({
     }
 });
 
-var tokkeYellow = new Product({
-    name: "Tøkke Amarillo",
-    description: "Tøkke NFC sencillo silicona Amarillo. Tamaño 5 x 5.",
-    defaultFunction: "Llamada a Contacto.",
-    kindFunction: "(Sugerencia de uso)",
-    txtToSell: "Puedes configurar el Tøkke Amarillo con el teléfono de la persona a quien llamar en caso de emergencia. Adviértele que vas a hacerlo.",
-    price: 5,
-    sellingSingleOption: true,
-    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/amarillo_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_08_t%C3%B8kke_yellow_soft.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_08_t%C3%B8kke_yellow_softe_low.png",
-    type: {
-        single: {
-            color: "Amarillo",
-            shape: "Círculo",
-        },
-    }
-});
-
-var tokkeGreen = new Product({
-    name: "Tøkke Verde",
-       
-    description: "Tøkke NFC sencillo silicona Verde. Tamaño 5 x 5.",
-    defaultFunction: "SMS a un contacto.",
-    kindFunction: "(Sugerencia de uso)",
-    txtToSell: "Hemos elegido el color verde para envíar SMS's en caso de que no puedas hablar. Pero puedes reconfigurarlo a tu gusto.",
-    price: 5,
-    sellingSingleOption: true,
-    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/verde_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_10_t%C3%B8kke_green_soft.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_10_t%C3%B8kke_green_soft_low.png",
-    type: {
-        single: {
-            color: "Verde",
-            shape: "Círculo",
-        },
-    }
-});
-
-var tokkeWhite = new Product({
-    name: "Tøkke Blanco",  
-    description: "Tøkke NFC sencillo silicona Blanco. Tamaño 5 x 5.",
-    defaultFunction: "Configúralo a tu gusto.",
-    kindFunction: "(Blanco: el más discreto)",
-    txtToSell: "Hacemos los Tøkkes de colores para que se localicen rápidamente. Sin embargo, este Tøkke es muy discreto sobre paredes blancas.",
-    price: 5,
-    sellingSingleOption: true,
-    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/white_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_04_t%C3%B8kke_white.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_04_t%C3%B8kke_white_low.png",
-    type: {
-        single: {
-            color: "Blanco",
-            shape: "Círculo",
-        },
-    }
-});
-
 var tokkeMagenta = new Product({
     name: "Tøkke Magenta",  
     description: "Tøkke NFC sencillo silicona Magenta. Tamaño 5 x 5.",
@@ -117,8 +97,8 @@ var tokkeMagenta = new Product({
     price: 5,
     sellingSingleOption: true,
     imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/magenta_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_04_t%C3%B8kke_magenta.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_04_t%C3%B8kke_magenta_low.png",
+    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_07_t%C3%B8kke_magenta.png",
+    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_07_t%C3%B8kke_magenta_low.png",
     type: {
         single: {
             color: "Magenta",
@@ -136,8 +116,8 @@ var tokkeOrange = new Product({
     price: 5,
     sellingSingleOption: true,
     imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/naranja_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_04_t%C3%B8kke_orange.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_04_t%C3%B8kke_orange_low.png",
+    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_09_t%C3%B8kke_orange.png",
+    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_09_t%C3%B8kke_orange_low.png",
     type: {
         single: {
             color: "Naranja",
@@ -146,21 +126,21 @@ var tokkeOrange = new Product({
     }
 });
 
-var tokkeHeartWhite = new Product({
-    name: "Tøkke Blanco Corazón",  
-    description: "Tøkke NFC sencillo silicona Blanco en forma de corazón. Tamaño 5 x 5.",
+var tokkeYellowSoft = new Product({
+    name: "Tøkke Amarillo Claro",  
+    description: "Tøkke NFC sencillo silicona Amarillo Claro. Tamaño 5 x 5.",
     defaultFunction: "Configúralo a tu gusto.",
-    kindFunction: "(Ideal para regalar a familia)",
-    txtToSell: "Este Tokke en forma de corazón es ideal para regalar a tus seres queridos para que sepan que siempre estás ahí.",
+    kindFunction: "(Color exclusivo Box Love)",
+    txtToSell: "La caja Box Love de 12 Tøkkes contiene los colores: Rojo, Amarillo, Verde, Azul, Blanco, Rosa, Crema, Jade, Sky y 3 Corazones Blancos.",
     price: 5,
-    sellingSingleOption: true,
-    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/corazon_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_04_t%C3%B8kke_heart_white.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_04_t%C3%B8kke_heart_white_low.png",
+    sellingSingleOption: false,
+    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/crema_tokke.png",
+    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_08_t%C3%B8kke_yellow_soft.png",
+    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_08_t%C3%B8kke_yellow_soft_low.png",
     type: {
         single: {
-            color: "Blanco",
-            shape: "Corazón",
+            color: "Amarillo Claro",
+            shape: "Círculo",
         },
     }
 });
@@ -222,21 +202,40 @@ var tokkeBlueSoft = new Product({
     }
 });
 
-var tokkeYellowSoft = new Product({
-    name: "Tøkke Amarillo Claro",  
-    description: "Tøkke NFC sencillo silicona Amarillo Claro. Tamaño 5 x 5.",
+var tokkeWhite = new Product({
+    name: "Tøkke Blanco",  
+    description: "Tøkke NFC sencillo silicona Blanco. Tamaño 5 x 5.",
     defaultFunction: "Configúralo a tu gusto.",
-    kindFunction: "(Color exclusivo Box Love)",
-    txtToSell: "La caja Box Love de 12 Tøkkes contiene los colores: Rojo, Amarillo, Verde, Azul, Blanco, Rosa, Crema, Jade, Sky y 3 Corazones Blancos.",
+    kindFunction: "(Blanco: el más discreto)",
+    txtToSell: "Hacemos los Tøkkes de colores para que se localicen rápidamente. Sin embargo, este Tøkke es muy discreto sobre paredes blancas.",
     price: 5,
-    sellingSingleOption: false,
-    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/crema_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_08_t%C3%B8kke_yellow_soft.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_08_t%C3%B8kke_yellow_softe_low.png",
+    sellingSingleOption: true,
+    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/white_tokke.png",
+    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_06_t%C3%B8kke_white.png",
+    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_06_t%C3%B8kke_white_low.png",
     type: {
         single: {
-            color: "Amarillo Claro",
+            color: "Blanco",
             shape: "Círculo",
+        },
+    }
+});
+
+var tokkeHeartWhite = new Product({
+    name: "Tøkke Blanco Corazón",  
+    description: "Tøkke NFC sencillo silicona Blanco en forma de corazón. Tamaño 5 x 5.",
+    defaultFunction: "Configúralo a tu gusto.",
+    kindFunction: "(Ideal para regalar a familia)",
+    txtToSell: "Este Tokke en forma de corazón es ideal para regalar a tus seres queridos para que sepan que siempre estás ahí.",
+    price: 5,
+    sellingSingleOption: true,
+    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/corazon_tokke.png",
+    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_05_t%C3%B8kke_heart_white.png",
+    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_05_t%C3%B8kke_heart_white_low.png",
+    type: {
+        single: {
+            color: "Blanco",
+            shape: "Corazón",
         },
     }
 });
@@ -296,8 +295,8 @@ var tokkeBoxLove = new Product({
     price: 30,
     sellingSingleOption: false,
     imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/header_pack_12_tokkes.jpg",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_16_t%C3%B8kke_easy_pack_8.png",
-  imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_16_t%C3%B8kke_easy_pack_8_low.png",
+    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_14_t%C3%B8kke_box-love.png",
+  imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_14_t%C3%B8kke_box-love_low.png",
     type: {
         box: {
             units: [{ _id: new mongoose.mongo.ObjectId(tokkeRed._id.toString()) },
@@ -317,19 +316,18 @@ var tokkeBoxLove = new Product({
     }
 });
 
-
-tokkeRed.save();
-tokkeBlue.save();
 tokkeYellow.save();
 tokkeGreen.save();
-tokkeWhite.save();
+tokkeRed.save();
+tokkeBlue.save();
 tokkeMagenta.save();
 tokkeOrange.save();
-tokkeHeartWhite.save();
+tokkeYellowSoft.save();
 tokkeGreenSoft.save();
 tokkeRedSoft.save();
 tokkeBlueSoft.save();
-tokkeYellowSoft.save();
+tokkeWhite.save();
+tokkeHeartWhite.save();
 tokkeEasyPack4.save();
 tokkeEasyPack8.save();
 tokkeBoxLove.save();

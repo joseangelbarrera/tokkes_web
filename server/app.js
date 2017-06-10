@@ -19,22 +19,20 @@ app.set('views', path.join( __dirname, 'views'))
 
 app.use(express.static( path.join(__dirname, '../public')))
 
+const queryAreSellingSingle = { "sellingSingleOption" : {exist: true} }
 const queryAreBoxes = { "type.single" :  { $exists: false } }
 const queryAreSingle = { "type.single" : { $exists: true } }
 
-app.get('/tokkes', (req,res) => {
 
-    Product.find()
+app.get('/tokkes', (req,res) => {
+    Product.find(queryAreSellingSingle)
     .then( tokkes => {
     	res.render('buy/tokkes/index', {tokkes})
     })
-
-    // Product.find( queryAreSingle )
-	//   .thge( tokkes => res.json( tokkes ))
 })
 
-app.get('/boxes', (req,res) => {
 
+app.get('/boxes', (req,res) => {
 	Product.find( queryAreBoxes )
 	  .populate('type.box.units')
 	  .exec(function(error, boxes) {
