@@ -1,14 +1,13 @@
-
-extends ../../layout.pug
+extends ../../../layout.pug
 
 block content
 	body.theme--square(data-reveal-selectors="section:not(.masonry):not(:first-of-type):not(.parallax)")
 		.main-container.transition--fade
-			include includes/header.pug
+			include includes/header_box_love.pug
 			section
 				.container.sheets
 
-					each tokke in tokkes 
+					each boxTokke in boxTokkes 
 						include includes/singleTokke.pug
 
 			section
@@ -19,4 +18,4 @@ block content
 							| Al finalizar de configurarlos haz la preorden.
 						|
 						a.btn(href="shop-cart-tokkes.html")
-							span.btn__text PREORDENAR TØKKES
+							span.btn__text PREORDENAR BOX LOVE DE 12 TØKKES

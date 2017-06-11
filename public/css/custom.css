@@ -10,11 +10,21 @@ Add your custom styles below
 
 
 
-div.nav-module.right{
-    width: 300px;
-
+.input-without-icon input {
+    padding-left: 1.5em;
+    width: 100%;
 }
 
+div.nav-module.right{
+    width: 300px;
+}
+
+
+@media (max-width: 768px) {
+    .decor {
+     display: none;
+    }
+}
 
 ul.bullets {
     list-style: circle;
@@ -254,8 +264,6 @@ option {
       color: white;
     margin-left: 0px;
     border-color: #1f88be;
-
-
 }
 
 #config_button {

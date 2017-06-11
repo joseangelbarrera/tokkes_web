@@ -1,0 +1,54 @@
+.nav-container
+  nav(lass='transition--fade')
+    // header nav
+    .nav-bar(data-fixed-at='700')
+      .nav-module.logo-module.left
+        a(href='index.html')
+          img.logo.logo-dark(alt='logo', src='/img/_tokkes_logo_300px.png')
+          img.logo.logo-light(alt='logo', src='/img/_tokkes_logo_300px.png')
+      // Module on the eft of the nav bar with the tokkes website navitgation
+      .nav-module.menu-module.left
+        ul.menu
+          li
+          li
+            a(href='#') CÓMO FUNCIONA
+            ul
+              li
+                a(href='info-sidebar-tokkes.html') TECNOLOGIA
+              li
+                a(href='info-sidebar-tokkes.html') TELÉFONOS COMPATIBLES
+              li.dropdown
+                a(href='#') CONFIGURACIÓN
+                ul
+                  li
+                    a(href='info-sidebar-tokkes.html') CONFIGURAR LOS TØKKES
+                  li
+                    a(href='info-sidebar-tokkes.html') CONFIGURAR EL TELÉFONO
+                  li
+                    a(href='info-sidebar-tokkes.html') TØKKES EN CASA
+                  li
+                    a(href='info-sidebar-tokkes.html') FAQ
+          li
+            a(href='#') COMPRAR
+            ul
+              li
+                a(href='/tokkes') Unidades Individuales
+              li.dropdown
+                a(href='#') Packs Especiales
+                ul
+                  li
+                    a(href='/box/love') Caja Love de 12 Tøkkes
+                  li
+                    a(href='/box/easyPack/8') Easy-Pack de 8 Tøkkes
+                  li
+                    a(href='/box/easyPack/4') Easy-Pack de 4 Tøkkes
+          li
+            a(href='blog-cards-sidebar-tokkes.html') BLOG
+          li
+            a(href='/contact') CONTACTO 
+          li
+            a(href='/login')
+              strong LOGIN
+    // end nav bar
+    .nav-mobile-toggle.visible-sm.visible-xs
+      i.icon-Align-JustifyAll.icon.icon--sm

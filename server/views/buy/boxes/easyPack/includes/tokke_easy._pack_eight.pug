@@ -2,16 +2,16 @@
   // - tokke Red
   .card.card-1.shadow_price
     .card__image
-      img(alt='Pic', src=tokke.imageBackground)
+      img(alt='Pic', src=boxTokke.imageBackground)
     .card__body.boxed.bg--white
       .card__title
-        h4 #{tokke.defaultFunction}
+        h4 #{boxTokke.defaultFunction}
         div
           h5
-            | #{tokke.kindFunction}
+            | #{boxTokke.kindFunction}
             h5
       p.short_margin
-        | #{tokke.txtToSell}
+        | #{boxTokke.txtToSell}
       .modal-instance
         // MODAL INSTANCE
         a#border-radius-active-1.btn.modal-trigger.btn-success.btn-block(href='#')
@@ -27,8 +27,8 @@
                 .header-config
                   .modal-close.modal-close-cross
                   .square-litle
-                    img#tokke-modal(src=tokke.imageLow)
-                  h3 #{tokke.name}: Configurador de Llamada
+                    img#boxTokke-modal(src=boxTokke.imageLow)
+                  h3 #{boxTokke.name}: Configurador de Llamada
               form
                 p.second_action 1º ¿Dónde quieres llamar?
                 #QuestionD.input-with-icon.dropdown
@@ -71,8 +71,8 @@
                 .header-config
                   .modal-close.modal-close-cross
                   .square-litle
-                    img#tokke-modal-2(src=tokke.imageLow)
-                  h3 #{tokke.name}: Configurador de Mensaje
+                    img#tokke-modal-2(src=boxTokke.imageLow)
+                  h3 #{boxTokke.name}: Configurador de Mensaje
               form
                 p.second_action 1º ¿Qué tipo de mensaje quieres enviar?
                 #QuestionD.input-with-icon.dropdown
@@ -101,7 +101,5 @@
                       button#config_button_1.btn.btn-danger.btn-lg(type='button')  Cancelar
                       button#config_button_3.btn.btn-primary.btn-lg(type='button', href='#')  guardar
         #config_button.text-center.top.btn-block
-          button#config_button_1.btn.btn-danger.btn-lg(type='button')  eliminar
-          button#config_button_2.btn.btn-primary.btn-lg(type='button')  duplicar
   // card
 // end tokke red

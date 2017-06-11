@@ -1,0 +1,26 @@
+extends ../layout.pug
+
+block content
+  body.scroll-assist.theme--square
+    .main-container.transition--fade
+      section.height-100.cover.cover-8
+        .col-md-6.col-sm-6.decor
+          .background-image-holder
+            img(alt='image', src='img/img_pass_revocer.jpg')
+        .col-md-6.col-sm-6.bg--white.text-center
+          .pos-vertical-center
+            img.logo.decor(alt='Tøkkes', src='img/_tokkes_logo_300px.png')
+            h5.lead
+              br
+              | Recupera la contraseña
+            .text-left
+              form(method='post')
+                .row
+                  .col-sm-12
+                    .input-without-icon
+                      label Correo electrónico:
+                      input(type='text', name='name', placeholder='Correo electrónico')
+                .row
+                  .col-md-12
+                    a.btn.btn--primary.text-center.center-block(href='pass-recover-tokkes.html')
+                      span.btn__text RECUPERAR

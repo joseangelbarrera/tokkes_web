@@ -1,0 +1,41 @@
+extends ../layout.pug
+
+block content
+  body.scroll-assist.theme--square
+    .main-container.transition--fade
+      section.height-100.cover.cover-8
+        .col-md-7.col-sm-5.decor
+          .background-image-holder
+            img(alt='image', src='img/hero13.jpg')
+        .col-md-5.col-sm-7.bg--white.text-center
+          .pos-vertical-center
+            img.decor.logo(alt='Tøkkes', src='/img/_tokkes_logo_300px.png')
+            h5.lead
+              br
+              |  Área de Usuario
+            .text-left
+              form(method='post')
+                .row
+                  .col-sm-12
+                    .input-with-icon
+                      label Nombre de usuario:
+                      input(type='text', name='name', placeholder='Nombre de usuario...')
+                .row
+                  .col-sm-12
+                    .input-without-icon
+                      label Contraseña:
+                      input(type='password', name='password', placeholder='••••••')
+                .row
+                  .col-sm-12.text-center
+                    .input-checkbox
+                      .inner
+                      input(type='checkbox')
+                    span.type--fine-print Mantenme conectado
+                .row
+                  .col-md-12
+                    a.btn.btn--primary.text-center.center-block(href='dashboard.html')
+                      span.btn__text ENTRAR
+                .row.text-center
+                  p.type--fine-print
+                    | ¿Olvidaste tu contraseña?
+                    a(href='/recover') Inicia recuperación de contraseña
