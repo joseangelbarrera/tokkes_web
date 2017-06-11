@@ -23,8 +23,8 @@ const queryAreSellingSingle = { "sellingSingleOption": { exist: true } }
 const queryAreBoxes = { "type.single": { $exists: false } }
 const queryAreSingle = { "type.single": { $exists: true } }
 
-// single tokke route
 
+// single tokke route
 app.get('/tokkes', (req, res) => {
     Product.find(queryAreSellingSingle)
         .then(tokkes => {
@@ -33,7 +33,6 @@ app.get('/tokkes', (req, res) => {
 })
 
 // easy packs route
-
 app.get('/box/easyPack/:numItems', (req, res) => {
     const { numItems } = req.params
     const queryBoxWithNumItems = { $where: `this.type.box.units.length === ${numItems}` }
@@ -45,7 +44,6 @@ app.get('/box/easyPack/:numItems', (req, res) => {
 })
 
 // box love route
-
 app.get('/box/love', (req, res) => {
     const queryBoxWithNumItems = { $where: `this.type.box.units.length === 12` }
     console.log(queryBoxWithNumItems)
@@ -59,10 +57,13 @@ app.listen(PORT)
 console.log(`Listening on PORT ${PORT}`)
 console.log(`Listening db: ${DB_URI}`)
 
-
+app.get('/home', (req, res) => { res.render('forms/home.pug') })
 app.get('/contact', (req, res) => { res.render('forms/contact.pug') })
 app.get('/login', (req, res) => { res.render('forms/login.pug') })
 app.get('/recover', (req, res) => { res.render('forms/recover.pug') })
+
+
+
 
 
 // ***************** //

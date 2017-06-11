@@ -1,0 +1,385 @@
+extends ../layout.pug
+
+block content
+  body.theme--square(data-reveal-selectors='section:not(.masonry):not(:first-of-type):not(.parallax)')
+    a#top
+    .loader
+    .main-container
+      section.imagebg.videobg.height-100.cover.cover-4.parallax(data-overlay='0')
+        video(autoplay='', loop='', muted='')
+          source(src='video/video.webm', type='video/webm')
+          source(src='video/video.mp4', type='video/mp4')
+          source(src='video/video.ogv', type='video/ogg')
+        .background-image-holder.background--bottom
+          img(alt='Couple Using Mobile and Tøkkes', src='img/couple_tokkes_landng_blue.jpg')
+        .container.pos-vertical-center
+          .row
+            .col-sm-12.text-center
+              h1
+                | TØKKES
+                br
+                | Protege a quien más quieres.
+                br
+              p.lead La forma más rápida y sencilla de gestionar una emergencia doméstica.
+              div
+                a.btn(href='#purchase-template')
+                  span.btn__text COMPRA TUS TØKKES
+                .modal-instance.modal-video-1
+                  .video-play-icon.video-play-icon--sm.modal-trigger
+                  span.h6 descubre tøkkes en este vídeo
+                  .modal-container
+                    .modal-content.bg-dark(data-width='60%', data-height='60%')
+                      iframe(allowfullscreen='allowfullscreen', src='https://www.youtube.com/embed/sIOoRt-sz3E?autoplay=1')
+      section
+        .container
+          .row
+            .col-sm-12.text-center
+              h6 CUIDA DE LOS TUYOS, INSTALA TØKKES EN CASA.
+              h3
+                | Tøkkes acorta radicalmente
+                br
+                | el tiempo de respuesta ante una emergencia.
+              p.lead
+                | Con Tøkkes las personas mayores o los niños víctimas de un accidente en el hogar no necesitan desbloquear el móvil o buscar un número para pedir ayuda. 
+                br
+                br
+                | ¡Tøkkes lo hace por ellos al instante!
+                br
+      section.imagebg.section--even.parallax(data-overlay='2')
+        .background-image-holder
+          img(alt='background', src='img/tokkes_foto.jpg')
+        .container
+          .row
+            .col-sm-12.text-center
+              .modal-instance.modal-video-1
+                .video-play-icon.modal-trigger
+                span.h6 mira cómo funciona tøkkes
+                .modal-container
+                  .modal-content.bg-dark(data-width='60%', data-height='60%')
+                    iframe(allowfullscreen='allowfullscreen', src='https://www.youtube.com/embed/pXsFdEJtrzc?autoplay=1')
+      section.features.features-6.bg--secondary
+        .container
+          .row
+            .col-sm-7
+              img(alt='pic', src='img/tokkes_box.png')
+            .col-sm-5
+              h3
+                | Tøkkes, 
+                font(face='Lora')
+                  span
+                    i el detalle de protección que necesitabas en tu hogar.
+              p.lead
+                | Añadir un nivel más de seguridad en las casas nunca fue tan fácil y asequible.
+                br
+              .feature.feature-2.col-xs-6.col-sm-12
+                .feature__title
+                  i.icon.icon-Home-5
+                  h6 En tu casa
+                p
+                  | Distribuye Tøkkes en tu hogar y actívalos para, en caso de accidente, llamar a un familiar.
+              .feature.feature-2.col-xs-6.col-sm-12
+                .feature__title
+                  i.icon.icon-Present
+                  h6 En casa de tus seres queridos
+                p
+                  | Configura y r egala Tøkkes a tus padres para que te llamen a ti en caso de emergencia.
+      section.wide-grid.masonry.decor
+        .masonry__filters.text-center(data-filter-all-text='¿Sabías qué en casa...')
+        .masonry__container.masonry--animate.masonry--inactive
+          .col-md-3.col-sm-6.masonry__item(data-masonry-filter='...los accidentes ocurren?')
+            .hover-element.hover-element-1(data-title-position='top,right')
+              .hover-element__initial
+                img(alt='Pic', src='img/accident_5.jpg')
+              .hover-element__reveal(data-overlay='9')
+                .boxed
+                  h5 Mejor reacción.
+                  span
+                    em
+                      | Tøkkes evita el bloqueo mental y mejora la capacidad de reacción ante el accidente ya sabes qué hacer al momento.
+          .col-md-3.col-sm-6.masonry__item(data-masonry-filter='...los accidentes ocurren?')
+            .hover-element.hover-element-1(data-title-position='top,right')
+              .hover-element__initial
+                img(alt='Pic', src='img/accident_4.jpg')
+              .hover-element__reveal(data-overlay='9')
+                .boxed
+                  h5  Accidentes en el hogar.
+                  span
+                    em
+                      | Cada 24 segundos se produce un accidente doméstico en nuestro país siendo los más frecuentes por caídas (44,20%)
+          .col-md-3.col-sm-6.masonry__item(data-masonry-filter='...los accidentes ocurren?')
+            .hover-element.hover-element-1(data-title-position='top,right')
+              .hover-element__initial
+                img(alt='Pic', src='img/accident_2.jpg')
+              .hover-element__reveal(data-overlay='9')
+                .boxed
+                  h5 Pedir ayuda es más fácil.
+                  span
+                    em
+                      | Tøkkes activa tu móvil sin desbloquearlo y pide ayuda por ti a la persona o entidad que tú hayas previamente decidido.
+          .col-md-3.col-sm-6.masonry__item(data-masonry-filter='...los accidentes ocurren?')
+            .hover-element.hover-element-1(data-title-position='top,right')
+              .hover-element__initial
+                img(alt='Pic', src='img/accident_3.jpg')
+              .hover-element__reveal(data-overlay='9')
+                .boxed
+                  h5 Principales accidentes.
+                  span
+                    em
+                      | Heridas y hemorragias. Quemaduras. Caídas . Atragantamientos y asfixias. Envenenamientos. Electrocuciones.
+      section
+        .container
+          .row
+            .col-sm-12
+              .elements--title
+                h4.text-center
+                  | Estas son las tres funciones básicas de Tøkkes.
+                  br
+                  | (Pero hay muchas más.)
+            .col-sm-4
+              .feature.boxed.feature-1
+                i.icon.icon-Phone-Wifi
+                h5 Hacer Llamadas Urgentes
+                p
+                  | Grok integrate thinker-maker-doer piverate entrepreneur sticky note iterate waterfall is so 2000 and late 360 campaign cortado quantitative vs. qualitative.
+            .col-sm-4
+              .feature.boxed.feature-1
+                i.icon.icon-Phone-SMS
+                h5 Enviar Mensajes de Ayuda
+                p
+                  | Grok integrate thinker-maker-doer piverate entrepreneur sticky note iterate waterfall is so 2000 and late 360 campaign cortado quantitative vs. qualitative.
+            .col-sm-4
+              .feature.boxed.feature-1
+                i.icon.icon-Ambulance
+                h5 Comunicar Emergencias
+                p
+                  | Grok integrate thinker-maker-doer piverate entrepreneur sticky note iterate waterfall is so 2000 and late 360 campaign cortado quantitative vs. qualitative.
+      section.imagebg.height-60.parallax(data-overlay='6')
+        .background-image-holder
+          img(alt='image', src='img/grandchildren_tokkes_landng.jpg')
+        .container.pos-vertical-center
+          .row
+            .col-sm-12.text-center
+              h1
+                | Ideal para personas
+                br
+                | que viven solas.
+              p.lead
+                | Tøkkes está diseñado para que cualquier persona pueda emplearlos.
+                br
+                | Sin desbloquear el móvil, e incluso sin saber marcar con él.
+                br
+                | .
+      section#margin-cero-2.features.features-9
+        .container
+          .row
+            #margin-cero-1.col-sm-12.text-center
+              h3 Elige tus Tøkkes y personalízalos online.
+              p#margin-cero.lead
+                | Configurar tus Tøkkes en 3 minutos es un juego de niños.
+                br
+          .row
+            .col-md-4.col-md-push-4.col-md-offset-0.col-sm-6.col-sm-offset-3.text-center
+              img(alt='Tøkke rojo silueteado', src='img/tokke_rojo_primer_plano_mano.jpg')
+            .col-md-3.col-md-pull-4.col-sm-6.col-xs-6.text-right.text-left-xs
+              .feature.feature-1
+                i.icon.icon-One-Finger
+                h5 Un Tøkke, una acción.
+                p Cada Tøkke solo puede hacer una cosa, tú decides cuál.
+              .feature.feature-1
+                i.icon.icon-Computer
+                h5 Rápida configuración.
+                p Configurarlo es fácil e intuitivo, hasta un niño puede hacerlo.
+            .col-md-3.col-sm-6.col-xs-6.col-md-push-2
+              .feature.feature-1
+                i.icon.icon-Support
+                h5 6 colore a elegir
+                p Elige tus colores y ponlos en un sitio visible y accesible de la casa.
+              .feature.feature-1
+                i.icon.icon-Heart
+                h5 Opción Círculo Blanco
+                p Hay un Tøkke blanco en forma de corazón ideal para regalar.
+      section
+        .container
+          .row
+            .col-sm-12
+              .elements--title
+                h3.text-center Tus Tøkkes contigo en solo 3 pasos.
+            .col-md-4.col-sm-6
+              .card.card-1
+                .card__image
+                  img(alt='Pic', src='img/tokkes_selection.png')
+                .card__body.boxed.bg--white
+                  .card__title
+                    h4 PASO UNO:
+                  span
+                    em Elige tus Tøkkes en nuestra web.
+                  p
+                    | Grok integrate thinker-maker-doer piverate entrepreneur sticky note iterate waterfall is so 2000 and late 360 campaign cortado quantitative vs. qualitative.
+            .col-md-4.col-sm-6
+              .card.card-1
+                .card__image
+                  img(alt='Pic', src='img/tokkes_package.png')
+                .card__body.boxed.bg--white
+                  .card__title
+                    h4 PASO DOS:
+                  span
+                    em Los preparamos y te los mandamos.
+                  p
+                    | Grok integrate thinker-maker-doer piverate entrepreneur sticky note iterate waterfall is so 2000 and late 360 campaign cortado quantitative vs. qualitative.
+            .col-md-4.col-sm-6
+              .card.card-1
+                .card__image
+                  img(alt='Pic', src='img/tokkes_infografia_paso_tres.png')
+                .card__body.boxed.bg--white
+                  .card__title
+                    h4 PASO TRES:
+                  span
+                    em Empieza a usarlos al recibirlos.
+                  p
+                    | Grok integrate thinker-maker-doer piverate entrepreneur sticky note iterate waterfall is so 2000 and late 360 campaign cortado quantitative vs. qualitative.
+      section.search
+        .container
+          .row
+            .col-sm-12.text-center
+              h3 Comprueba si tu teléfono móvil es compatible.
+              p#margin-forty.lead
+                | Tøkkes funciona con la mayoría de los móviles NFC.
+            .col-md-5.col-md-offset-1.col-sm-6
+              .feature.feature-2
+                .feature__title
+                  i.icon.icon-A-Z
+                  h6 CONSULTA TODA LA LISTA
+                p
+                  | Every one of Pillar’s stylish blocks are fully responsive,meaning that your site shines - regardless of the device your users are viewing from.
+                #phone-list
+                  a.btn(href='list_compatible_devices_tokkes.html')
+                    span.btn__text ver lista de teléfonos compatibles
+            .col-md-5.col-sm-6
+              .feature.feature-2
+                .feature__title
+                  i.icon.icon-Magnifi-Glass2
+                  h6 BUSCA POR MARCA Y MODELO
+                p
+                  | Comprueba si tu teléfono es compatible. Introduce la marca y el modelo tratando de ser lo más específico posible ya que el busacdor puede llevgar a devuer hasta 100 resultados.
+                // search mobile compatiblity with Tøkkes
+                form#phone-search.form-inline(action='', method='POST', role='form')
+                  input#phoneBrand_input(type='text', name='marca del móvil', placeholder='Marca')
+                  input#phoneModel_input(type='text', name='modelo del móvil', placeholder='Modelo')
+                  // button search mobile compatiblity
+                  button#phoneBrand_button.btn.btn-primary.modal-trigger(type='submit', data-modal-id='1') Buscar
+                // window modal
+                .modal-container.modal-instance.height--natural(data-modal-id='1')
+                  .modal-content.bg-white.card.card-1.pos-vertical-center(data-width='70%', data-height='60%')
+                    .clearfix
+                      .modal-close.modal-close-cross
+                      .boxed.boxed--lg.bg--white.box-shadow-wide.gray-background
+                        .col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2.text-center
+                          div
+                            h4 Tabla de compatibilidad:
+                          div
+                            ul#list-phone-group.text-left.bullets(type='list')
+                          button#close-modal.btn.btn-default.modal-close(type='button') Close
+                  // end of window modal
+            //
+              <div class="col-sm-12">
+              <img alt="device" src="img/s6-dorado-900x900.png">
+              </div>
+      section#margin-cero-5.height-40
+        .container.pos-vertical-center
+          .row
+            .col-sm-12.text-center
+              h2
+                | Pre-ordena ahora tus Tøkkes 
+                br
+                | a nuestro precio “miembro fundador”.
+      section#margin-cero-3
+        .container
+          .row
+            .shop-item-detail.shop-item-detail-2
+              .col-sm-12
+                .slider(data-paging='false', data-arrows='true')
+                  ul.slides
+                    li
+                      img(alt='product', src='img/tokke_cian_primer_plano_1600.png')
+                    li
+                      img(alt='product', src='img/tokke_rojo_primer_plano_1600.png')
+                    li
+                      img(alt='product', src='img/tokke_azul_claro_primer_plano_1600.png')
+                    li
+                      img(alt='product', src='img/tokke_heart_primer_plano_1600.png')
+              .col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3.text-center
+                .item__title
+                  h4 ¿Cuántos Tøkkes necesitas?
+                .item__price
+                  span.type--strikethrough 9€ unidad
+                  span 5€ unidad
+                a.btn(href='tokkes_comprar.html')
+                  span.btn__text COMPRAR TØKKES INDIVIDUALES
+      section#margin-cero-4.bg--white
+        .container
+          .row
+            .related-products
+              .col-sm-12
+                h4 Presentaciones especial regalo.
+              .col-sm-4
+                a(href='tokkes_comprar-eassy-pack-4.html')
+                  .shop-item.shop-item-1
+                    .shop-item__price.hover--reveal
+                      span.type--strikethrough 27 €
+                      span 12 €
+                    .shop-item__image
+                      img(alt='product', src='img/tokkes_4_3.png')
+                    .shop-item__title
+                      h5 Easy-Pack de 4 Tøkkes
+              .col-sm-4
+                a(href='tokkes_comprar-eassy-pack-8.html')
+                  .shop-item.shop-item-1
+                    .shop-item__price.hover--reveal
+                      span.type--strikethrough 54 €
+                      span 20 €
+                    .shop-item__image
+                      img(alt='product', src='img/tokkes_8.png')
+                    .shop-item__title
+                      h5 Easy-Pack de 8 tokkes
+              .col-sm-4
+                a(href='tokkes_comprar-caja-12.html')
+                  .shop-item.shop-item-1
+                    .shop-item__price.hover--reveal
+                      span.type--strikethrough 100 €
+                      span $35.00
+                    .shop-item__image
+                      img(alt='product', src='img/tokkes_12_2.png')
+                    .shop-item__title
+                      h5 Caja “LOVE” de 12 Tøkkes
+      section.cover.cover-12.form--dark.imagebg.height-100.parallax(data-overlay='4')
+        .background-image-holder
+          img(alt='image', src='img/old_man_tokkes.jpg')
+        .container.pos-vertical-center.text-center-xs
+          .row.pos-vertical-align-columns
+            .col-sm-8.col-sm-offset-2.col-md-6
+              h2
+                | Tøkkes,
+                br
+                | es mucho más.
+                br
+                | ¡Descúbrelo!
+              .modal-instance.modal-video-1
+                .modal-container
+                  .modal-content.bg-dark(data-width='60%', data-height='60%')
+                    iframe(allowfullscreen='allowfullscreen', src='https://www.youtube.com/embed/4QUVRm4UZA4?autoplay=1')
+            .col-md-5.col-sm-8.col-sm-offset-2
+              .form-subscribe-1.boxed.boxed--lg.bg--white.text-center.box-shadow-wide
+                h4
+                  | PÍDENOS GRATIS
+                  br
+                  | EL LIBRO DE USOS
+                  br
+                p.lead  Rellena el formulario.
+                form#subForm(action='http://mrareco.createsend.com/t/d/s/kieth/', method='post', data-error='Please fill all fields correctly.', data-success='Thanks for signing up! Please check your inbox for confirmation email.')
+                  .input-without-icon
+                    label(for='fieldName') Tu nombre
+                    input#fieldName(name='cm-name', type='text', placeholder='Tu nombre')
+                  .input-without-icon
+                    label(for='fieldEmail') Tu correo electrónico
+                    input#fieldEmail.validate-required.validate-email(name='cm-kieth-kieth', type='email', required='', placeholder='Tu correo electrónico')
+                  button(type='submit') QUIERO MI LIBRO
