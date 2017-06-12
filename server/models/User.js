@@ -5,11 +5,19 @@ const Schema = mongoose.Schema
 
 var userSchema = new Schema({
 
-    name: {
+
+    username: {
         type: String,
         required: true
     }
-    password: String,
+
+        password: {
+        type: String,
+        required: true
+    },
+
+    name: String,
+
     surname1: String,
     surname2: String,
     email: {
@@ -24,7 +32,7 @@ var userSchema = new Schema({
         floor: String,
         locality: String,
         province: String,
-        Posta_code: Number,
+        postal_code: Number,
         country: String
     }
 

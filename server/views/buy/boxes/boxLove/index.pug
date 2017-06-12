@@ -4,18 +4,19 @@ block content
 	body.theme--square(data-reveal-selectors="section:not(.masonry):not(:first-of-type):not(.parallax)")
 		.main-container.transition--fade
 			include includes/header_box_love.pug
+				.col-sm-10.col-sm-offset-1.text-center
+						h3 por solo 35€.
 			section
 				.container.sheets
 
 					each boxTokke in boxTokkes 
 						include includes/singleTokke.pug
-
 			section
 				.container.pos-vertical-center
 					.col-sm-10.col-sm-offset-1.text-center
 						p.lead
 							| Configura los Tøkkes a tu gusto. Puedes añadir tantos Tøkkes como desees y borrar los que no quieras.
 							| Al finalizar de configurarlos haz la preorden.
-						|
+							|
 						a.btn(href="shop-cart-tokkes.html")
 							span.btn__text PREORDENAR BOX LOVE DE 12 TØKKES

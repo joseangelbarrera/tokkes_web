@@ -38,6 +38,7 @@ app.get('/box/easyPack/:numItems', (req, res) => {
     const queryBoxWithNumItems = { $where: `this.type.box.units.length === ${numItems}` }
     console.log(queryBoxWithNumItems)
     Product.find(queryBoxWithNumItems)
+        .populate('type.box.units')
         .then(boxTokkes => {
             res.render('buy/boxes/easyPack/index', { boxTokkes: boxTokkes[0].type.box.units })
         })
@@ -46,8 +47,8 @@ app.get('/box/easyPack/:numItems', (req, res) => {
 // box love route
 app.get('/box/love', (req, res) => {
     const queryBoxWithNumItems = { $where: `this.type.box.units.length === 12` }
-    console.log(queryBoxWithNumItems)
     Product.find(queryBoxWithNumItems)
+        .populate('type.box.units')
         .then(boxTokkes => {
             res.render('buy/boxes/boxLove/index', { boxTokkes: boxTokkes[0].type.box.units })
         })
@@ -65,43 +66,41 @@ app.get('/recover', (req, res) => { res.render('forms/recover.pug') })
 
 
 
-
 // ***************** //
 
-/*
 
 // it jsons selling single
 
 app.get('/tokkes/json', (req,res) => {
     Product.find(queryAreSellingSingle)
   .exec(function(error, tokkes) {
-	      res.json( tokkes )
+          res.json( tokkes )
     })
 })
 
 // it returns a json with the individual tokkes
 
 app.get('/json', (req,res) => {
-	Product.find( queryAreBoxes )
-	  .populate('type.box.units')
-	  .find( queryAreSingle )
-	  .exec(function(error, boxTokkes) {
-	      res.json( boxTokkes )
-	  })
+    Product.find( queryAreBoxes )
+      .populate('type.box.units')
+      .find( queryAreSingle )
+      .exec(function(error, boxTokkes) {
+          res.json( boxTokkes )
+      })
 })
 
 
 // it returns a json with number of tokkes included in eack box (4, 8, 12)
 
 app.get('/box/json/:numItems', (req,res) => {
-	const { numItems } = req.params
-	const queryBoxWithNumItems =  { $where: `this.type.box.units.length === ${numItems}` }
-	console.log(queryBoxWithNumItems)
-	Product.find( queryBoxWithNumItems )
-	  .populate('type.box.units')
-	  .exec(function(error, boxTokkes) {
-	      res.json( boxTokkes[0].type.box.units )
-	  })
+    const { numItems } = req.params
+    const queryBoxWithNumItems =  { $where: `this.type.box.units.length === ${numItems}` }
+    console.log(queryBoxWithNumItems)
+    Product.find( queryBoxWithNumItems )
+      .populate('type.box.units')
+      .exec(function(error, boxTokkes) {
+          res.json( boxTokkes[0].type.box.units )
+      })
 })
 
-*/
+

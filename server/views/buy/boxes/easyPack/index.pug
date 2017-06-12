@@ -7,7 +7,6 @@ block content
 			include includes/header_easy_pack.pug
 			section
 				.container.sheets
-
 					each boxTokke in boxTokkes 
 						include includes/tokke_easy_pack.pug
 
@@ -17,6 +16,5 @@ block content
 						p.lead
 							| Configura los Tøkkes a tu gusto. Puedes añadir tantos Tøkkes como desees y borrar los que no quieras.
 							| Al finalizar de configurarlos haz la preorden.
-						|
 						a.btn(href="shop-cart-tokkes.html")
-							span.btn__text PREORDENAR EASY-PACK DE { x } TØKKES
+							span.btn__text PREORDENAR EASY-PACK DE #{ x } TØKKES

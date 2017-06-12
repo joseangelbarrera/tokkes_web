@@ -1,10 +1,9 @@
 const toDo = require('../../../models/Order')
-const debug = require('debug')('tasks')
+const toDo = require('../../../models/Product')
 
-debug(`Debug is working`)
 
 function addTokkesSingleSelling.js(req, res) {
-    toDo.find()
+    Order.find()
         .then(toDos => {
             debug(`This is the value of ${toDos}`)
             res.render('index.pug', { toDos })
