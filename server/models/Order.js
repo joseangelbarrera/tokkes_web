@@ -5,11 +5,11 @@ var orderSchema = new Schema({
 
     id_user: String,
     pre_order: {
-
         type: Boolean,
         default: true
     },
-    price: Number,
+
+    total_price: Number,
 
     orderDateCreation: {
         type: Number,
@@ -29,7 +29,44 @@ var orderSchema = new Schema({
         country: String
     }
 
-    configs: [{ type: Schema.Types.ObjectId, ref: 'ConfigTokke' }, ]
+    tokkes_config: [{
+        id_product: String,
+
+        actionType: {
+
+            makePhoneCall: {
+                type: Boolean,
+                default: false,
+                requiered: sendMessage = false ? true : false
+            },
+
+            sendMessage: {
+                type: Boolean,
+                default: false,
+                requiered: makePhoneCall = false ? true : false
+            }
+        },
+
+        originPhone: {
+            type: Number,
+            required: true
+        },
+
+        destinyPhone: {
+            type: Number,
+            required: true
+        },
+
+        MessageTxt: {
+            type: String,
+            maxlength: 160,
+            minlength: 5,
+            requiered: actionType.sendMessage = true ? true : false
+        },
+
+        type: Schema.Types.ObjectId, ref: 'Product',
+
+    }],
 
 }, { collection })
 
