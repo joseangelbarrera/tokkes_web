@@ -1,72 +1,90 @@
 const express = require('express')
 const path = require('path')
-const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
-const dotenv = require('dotenv')
+const session = require('express-session')
+const FileStore = require('session-file-store')(session);
 
-const jwt = require('jsonwebtoken') // to generate tokens
-const expressJwt = require('express-jwt') // to verify tokens
-// const mongoose = require('mongoose')
-
-const passport = require('./config/passport')
-
-const authRoutes = require('./routes/auth')
-
-const PORT = process.env.PORT || 3000
 const app = express()
 
-dotenv.load()
+const routesHome = require('./routes/home')
+const routesTokke = require('./routes/buy/tokke')
+const routesTokkes = require('./routes/buy/tokkes')
+const routesBoxLove = require('./routes/boxes/boxLove')
+const routesEasyPack4 = require('./routes/boxes/easyPack')
+const routesEasyPack8 = require('./routes/boxes/easyPack')
+const routesLegal = require('./routes/legal')
+const routesLegalDischarge = require('./routes/legalDischarge')
+const routesInfo = require('./routes/info')
+const routesTokkesSetup = require('./routes/tokkessetup')
+const routesTech = require('./routes/technology')
+const routesCompatible = require('./routes/compatibility')
+const routesAtHome = require('./routes/AtHome')
+const routesPhoneSetup = require('./routes/phonesetup')
+const routesFaq = require('./routes/faq')
+
+
+
+
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.use(express.static(path.join(__dirname, '../public')))
-app.use(passport.initialize())
-
-app.get('/data', (req, res) => {
-  const msg = 'super secret data'
-  res.json({msg})
-})
-
-const db = require('./config/db')
-db.open(DB_URI)
-
-const Product = require('./models/Product')
-
-mongoose.Promise = global.Promise
+app.use( express.static(path.join(__dirname, '../public')) )
 
 app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, 'views'))
 
-app.get('/', (req, res) => res.redirect('/tokkes'))
+app.use(session({
+  name: 'tokkes-session-cookie-id',
+  secret: 'sd987sd89fsd9fsd9f8',
+  saveUninitialized: true,
+  resave: true,
+  store: new FileStore()
+}));
 
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config()
-}
+app.use( (req, res, next) => {
+  const cart = req.session.cart = req.session.cart || {}
+  if ( cart._locals ) delete cart._locals
+  console.log('req.session => ', req.session);
+  next();
+});
 
-app.use(express.static( path.join(__dirname, '/public')))
 
-const routesTokke = require('./routes/buy/tokke')
-const routesTokkes = require('./routes/buy/tokkes')
+app.use(routesHome)
+app.use(routesTokke)
+app.use(routesTokkes)
+app.use (routesBoxLove)
+app.use (routesEasyPack4)
+app.use (routesEasyPack8)
+app.use (routesLegal)
+app.use (routesLegalDischarge)
+app.use (routesInfo)
+app.use (routesTokkesSetup)
+app.use (routesTech)
+app.use (routesCompatible)
+app.use (routesAtHome)
+app.use (routesPhoneSetup)
+app.use (routesFaq)
 
-/* bodyParser */
 
-/* static folder */
 
-app.use(authRoutes)
+
+
+
+
 
 module.exports = app
 
-global.__base = __dirname + '/server/'
+
+/* --------------------------------------- */
 
 
-// MODULARIZADO
 
-app.get('/home', (req, res) => { res.render('forms/home.pug') })
-app.get('/contact', (req, res) => { res.render('forms/contact.pug') })
-app.get('/login', (req, res) => { res.render('forms/login.pug') })
-app.get('/recover', (req, res) => { res.render('forms/recover.pug') })
-app.get('/tokkes', (req, res) => { res.render('buy/tokkes') })
+// app.get('/contact', (req, res) => { res.render('forms/contact.pug') })
+// app.get('/login', (req, res) => { res.render('forms/login.pug') })
+// app.get('/recover', (req, res) => { res.render('forms/recover.pug') })
+// app.get('/tokkes', (req, res) => { res.render('buy/tokkes') })
+
 // app.get('/box/easyPack/:numItems', )
 // app.get('/box/love', (req, res) => { res.render('box/love') })
 
@@ -75,41 +93,28 @@ app.get('/tokkes', (req, res) => { res.render('buy/tokkes') })
 
 // single tokke route
 
-const queryAreSellingSingle = { "sellingSingleOption": { exist: true } }
-app.get('/tokkes', (req, res) => {
-    Product.find(queryAreSellingSingle)
-        .then(tokkes => {
-            res.render('buy/tokkes/index', { tokkes })
-        })
-})
+// const queryAreSellingSingle = { "sellingSingleOption": { exist: true } }
+// app.get('/tokkes', (req, res) => {
+//     Product.find(queryAreSellingSingle)
+//         .then(tokkes => {
+//             res.render('buy/tokkes/index', { tokkes })
+//         })
+// })
 
-// box love route
+// // box love route
 
-app.get('/box/love', (req, res) => {
-    const queryBoxWithNumItems = { $where: `this.type.box.units.length === 12` }
-    Product.find(queryBoxWithNumItems)
-        .populate('type.box.units')
-        .then(boxTokkes => {
-            res.render('buy/boxes/boxLove/index', { boxTokkes: boxTokkes[0].type.box.units })
-        })
-})
-
-// easy packs route
-
-app.get('/box/easyPack/:numItems', (req, res) => {
-    const { numItems } = req.params
-    const queryBoxWithNumItems = { $where: `this.type.box.units.length === ${numItems}` }
-    console.log(queryBoxWithNumItems)
-    Product.find(queryBoxWithNumItems)
-        .populate('type.box.units')
-        .then(boxTokkes => {
-            res.render('buy/boxes/easyPack/index', { boxTokkes: boxTokkes[0].type.box.units })
-        })
-})
+// app.get('/box/love', (req, res) => {
+//     const queryBoxWithNumItems = { $where: `this.type.box.units.length === 12` }
+//     Product.find(queryBoxWithNumItems)
+//         .populate('type.box.units')
+//         .then(boxTokkes => {
+//             res.render('buy/boxes/boxLove/index', { boxTokkes: boxTokkes[0].type.box.units })
+//         })
+// })
 
 
-app.listen(PORT)
-console.log(`Listening on PORT ${PORT}`)
+
+// module.exports = app
 
 
 

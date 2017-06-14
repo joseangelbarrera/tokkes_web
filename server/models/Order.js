@@ -65,7 +65,7 @@ var orderSchema = new Schema({
                                     minlength: 5
                                 } },
 
-                     { type: Schema.Types.ObjectId, ref: 'Product'},
+                    { type: Schema.Types.ObjectId, ref: 'Product'},
                      ],
 
     })

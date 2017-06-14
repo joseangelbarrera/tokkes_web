@@ -1,4 +1,4 @@
-const Order = require('../../../../models/Order')
+const Order = require( __base + 'models/Order')
 
 const queryAreSellingSingle = { "sellingSingleOption": { exist: true } }
 
