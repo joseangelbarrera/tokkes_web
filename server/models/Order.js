@@ -3,72 +3,72 @@ const Schema = mongoose.Schema
 
 var orderSchema = new Schema({
 
-    id_user: String,
-    pre_order: {
-        type: Boolean,
-        default: true
-    },
+            id_user: String,
 
-    total_price: Number,
-
-    orderDateCreation: {
-        type: Number,
-        default: +new Date
-    },
-
-    orderDateLastUpdate: Number,
-
-    orderAddress: {
-        street: String,
-        number: String,
-        portal: String,
-        floor: String,
-        locality: String,
-        province: String,
-        Posta_code: Number,
-        country: String
-    }
-
-    tokkes_config: [{
-        id_product: String,
-
-        actionType: {
-
-            makePhoneCall: {
+            pre_order: {
                 type: Boolean,
-                default: false,
-                requiered: sendMessage = false ? true : false
+                default: true
             },
 
-            sendMessage: {
-                type: Boolean,
-                default: false,
-                requiered: makePhoneCall = false ? true : false
-            }
-        },
+            total_price: Number,
 
-        originPhone: {
-            type: Number,
-            required: true
-        },
+            orderDateCreation: {
+                type: Number,
+                default: +new Date
+            },
 
-        destinyPhone: {
-            type: Number,
-            required: true
-        },
+            orderDateLastUpdate: Number,
 
-        MessageTxt: {
-            type: String,
-            maxlength: 160,
-            minlength: 5,
-            requiered: actionType.sendMessage = true ? true : false
-        },
+            orderAddress: {
+                street: String,
+                number: String,
+                portal: String,
+                floor: String,
+                locality: String,
+                province: String,
+                postal_code: Number,
+                country: String
+            },
 
-        type: Schema.Types.ObjectId, ref: 'Product',
+            tokkes_config: [
+         
+                    { id_product: String },
 
-    }],
+                    { actionType: {
 
-}, { collection })
+                                  makePhoneCall: {
+                                      type: Boolean,
+                                      default: false,
+                                       required: sendMessage = false ? true : false
+                                            },
+
+                                   sendMessage: {
+                                      type: Boolean,
+                                      default: false,
+                                      required: makePhoneCall = false ? true : false
+                                           }
+                                    } },
+
+                    { originPhone: {
+                                    type: Number,
+                                    required: true
+                               } },
+
+                    { destinyPhone: {
+                                   type: Number,
+                                   required: true
+                               } },
+
+                    { messageTxt: {
+                                    type: String,
+                                    maxlength: 160,
+                                    minlength: 5
+                                } },
+
+                     { type: Schema.Types.ObjectId, ref: 'Product'},
+                     ],
+
+    })
 
 const order = mongoose.model('Order', orderSchema);
 module.exports = order

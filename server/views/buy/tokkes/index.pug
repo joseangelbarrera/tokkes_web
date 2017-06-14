@@ -20,3 +20,20 @@ block content
 						|
 						a.btn(href="shop-cart-tokkes.html")
 							span.btn__text PREORDENAR TØKKES
+		.modal-container(data-autoshow='500')
+			.modal-content.height--natural
+				.card.card-1
+					.card__image.bg--white
+						img(alt='Pic', src='img/tokke_modal.jpg')
+					.card__body.boxed.bg--white.text-center
+						.card__title
+							h4 Configura aquí tus Tøkkes antes de realizar tu Pre-Orden.
+						p
+							| "Duplica" o "Elimina" Tøkkes para seleccionar el tipo y número que
+							| deseas configurar.
+							| Recuerda que si borras un Tøkke ya no podrás recuperarlo.
+							| NO NECESITAS NINGUNA TARJETA DE CRÉDITO EN NINGÚN MOMENTO DEL PROCESO.
+						a.modal-close.btn.btn--sm(href='#')
+							span.btn__text
+								| ¡OK! Entendido.
+			// end of modal-content

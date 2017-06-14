@@ -18,9 +18,9 @@ var tokkeYellow = new Product({
     txtToSell: "Puedes configurar el Tøkke Amarillo con el teléfono de la persona a quien llamar en caso de emergencia. Adviértele que vas a hacerlo.",
     price: 5,
     sellingSingleOption: true,
-    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/amarillo_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_01_t%C3%B8kke_yellow_soft.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_01_t%C3%B8kke_yellow_low.png",
+    imageBackground: "https://tokkes.herokuapp.com/img/amarillo_tokke.png",
+    image: "https://tokkes.herokuapp.com/img/product_models/model_01_t%C3%B8kke_yellow_soft.png",
+    imageLow: "https://tokkes.herokuapp.com/img/product_models/model_01_t%C3%B8kke_yellow_low.png",
     type: {
         single: {
             color: "Amarillo",
@@ -38,9 +38,9 @@ var tokkeGreen = new Product({
     txtToSell: "Hemos elegido el color verde para envíar SMS's en caso de que no puedas hablar. Pero puedes reconfigurarlo a tu gusto.",
     price: 5,
     sellingSingleOption: true,
-    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/verde_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_02_t%C3%B8kke_green.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_02_t%C3%B8kke_green_low.png",
+    imageBackground: "https://tokkes.herokuapp.com/img/verde_tokke.png",
+    image: "https://tokkes.herokuapp.com/img/product_models/model_02_t%C3%B8kke_green.png",
+    imageLow: "https://tokkes.herokuapp.com/img/product_models/model_02_t%C3%B8kke_green_low.png",
     type: {
         single: {
             color: "Verde",
@@ -58,9 +58,9 @@ var tokkeRed = new Product({
     txtToSell: "Te sugerimos configurar el Tøkke rojo para llamar al teléfono de emergencias 112 al instante. Pero puedes confirurarlo como deees.",
     price: 5,
     sellingSingleOption: true,
-    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/rojo_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_03_t%C3%B8kke_red.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_03_t%C3%B8kke_red_low.png",
+    imageBackground: "https://tokkes.herokuapp.com/img/rojo_tokke.png",
+    image: "https://tokkes.herokuapp.com/img/product_models/model_03_t%C3%B8kke_red.png",
+    imageLow: "https://tokkes.herokuapp.com/img/product_models/model_03_t%C3%B8kke_red_low.png",
     type: {
         single: {
             color: "Rojo",
@@ -77,9 +77,9 @@ var tokkeBlue = new Product({
     txtToSell: 'Puedes enviar cada día un mensaje "TODO VA BIEN"  a la cuenta de Whatsapp de un familiar para que pueda monitorizar tu situación.',
     price: 5,
     sellingSingleOption: true,
-    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/azul_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_04_t%C3%B8kke_blue.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_04_t%C3%B8kke_blue_low.png",
+    imageBackground: "https://tokkes.herokuapp.com/img/azul_tokke.png",
+    image: "https://tokkes.herokuapp.com/img/product_models/model_04_t%C3%B8kke_blue.png",
+    imageLow: "https://tokkes.herokuapp.com/img/product_models/model_04_t%C3%B8kke_blue_low.png",
     type: {
         single: {
             color: "Azul",
@@ -96,9 +96,9 @@ var tokkeMagenta = new Product({
     txtToSell: "Configura el Tøkke a tu gusto y llávalo contigo. Dájarlo en el coche, en el garage, en la taquilla del gimnasio son solo unas pocas ideas.",
     price: 5,
     sellingSingleOption: true,
-    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/magenta_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_07_t%C3%B8kke_magenta.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_07_t%C3%B8kke_magenta_low.png",
+    imageBackground: "https://tokkes.herokuapp.com/img/magenta_tokke.png",
+    image: "https://tokkes.herokuapp.com/img/product_models/model_07_t%C3%B8kke_magenta.png",
+    imageLow: "https://tokkes.herokuapp.com/img/product_models/model_07_t%C3%B8kke_magenta_low.png",
     type: {
         single: {
             color: "Magenta",
@@ -115,9 +115,9 @@ var tokkeOrange = new Product({
     txtToSell: 'Contacta con el "016", el Servicio telefónico de información y de asesoramiento jurídico en materia de violencia de género en España.',
     price: 5,
     sellingSingleOption: true,
-    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/naranja_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_09_t%C3%B8kke_orange.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_09_t%C3%B8kke_orange_low.png",
+    imageBackground: "https://tokkes.herokuapp.com/img/naranja_tokke.png",
+    image: "https://tokkes.herokuapp.com/img/product_models/model_09_t%C3%B8kke_orange.png",
+    imageLow: "https://tokkes.herokuapp.com/img/product_models/model_09_t%C3%B8kke_orange_low.png",
     type: {
         single: {
             color: "Naranja",
@@ -134,9 +134,9 @@ var tokkeYellowSoft = new Product({
     txtToSell: "La caja Box Love de 12 Tøkkes contiene los colores: Rojo, Amarillo, Verde, Azul, Blanco, Rosa, Crema, Jade, Sky y 3 Corazones Blancos.",
     price: 5,
     sellingSingleOption: false,
-    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/crema_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_08_t%C3%B8kke_yellow_soft.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_08_t%C3%B8kke_yellow_soft_low.png",
+    imageBackground: "https://tokkes.herokuapp.com/img/crema_tokke.png",
+    image: "https://tokkes.herokuapp.com/img/product_models/model_08_t%C3%B8kke_yellow_soft.png",
+    imageLow: "https://tokkes.herokuapp.com/img/product_models/model_08_t%C3%B8kke_yellow_soft_low.png",
     type: {
         single: {
             color: "Amarillo Claro",
@@ -153,9 +153,9 @@ var tokkeGreenSoft = new Product({
     txtToSell: "La caja Box Love de 12 Tøkkes contiene los colores: Rojo, Amarillo, Verde, Azul, Blanco, Rosa, Crema, Jade, Sky y 3 Corazones Blancos.",
     price: 5,
     sellingSingleOption: false,
-    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/jade_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_10_t%C3%B8kke_green_soft.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_10_t%C3%B8kke_green_soft_low.png",
+    imageBackground: "https://tokkes.herokuapp.com/img/jade_tokke.png",
+    image: "https://tokkes.herokuapp.com/img/product_models/model_10_t%C3%B8kke_green_soft.png",
+    imageLow: "https://tokkes.herokuapp.com/img/product_models/model_10_t%C3%B8kke_green_soft_low.png",
     type: {
         single: {
             color: "Verde Claro",
@@ -172,9 +172,9 @@ var tokkeRedSoft = new Product({
     txtToSell: "La caja Box Love de 12 Tøkkes contiene los colores: Rojo, Amarillo, Verde, Azul, Blanco, Rosa, Crema, Jade, Sky y 3 Corazones Blancos.",
     price: 5,
     sellingSingleOption: false,
-    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/rosa_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_11_t%C3%B8kke_red_soft.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_11_t%C3%B8kke_red_soft_low.png",
+    imageBackground: "https://tokkes.herokuapp.com/img/rosa_tokke.png",
+    image: "https://tokkes.herokuapp.com/img/product_models/model_11_t%C3%B8kke_red_soft.png",
+    imageLow: "https://tokkes.herokuapp.com/img/product_models/model_11_t%C3%B8kke_red_soft_low.png",
     type: {
         single: {
             color: "Rojo Claro",
@@ -191,9 +191,9 @@ var tokkeBlueSoft = new Product({
     txtToSell: "La caja Box Love de 12 Tøkkes contiene los colores: Rojo, Amarillo, Verde, Azul, Blanco, Rosa, Crema, Jade, Sky y 3 Corazones Blancos.",
     price: 5,
     sellingSingleOption: false,
-    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/sky_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_12_t%C3%B8kke_blue_soft.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_12_t%C3%B8kke_blue_soft_low.png",
+    imageBackground: "https://tokkes.herokuapp.com/img/sky_tokke.png",
+    image: "https://tokkes.herokuapp.com/img/product_models/model_12_t%C3%B8kke_blue_soft.png",
+    imageLow: "https://tokkes.herokuapp.com/img/product_models/model_12_t%C3%B8kke_blue_soft_low.png",
     type: {
         single: {
             color: "Azul Claro",
@@ -210,9 +210,9 @@ var tokkeWhite = new Product({
     txtToSell: "Hacemos los Tøkkes de colores para que se localicen rápidamente. Sin embargo, este Tøkke es muy discreto sobre paredes blancas.",
     price: 5,
     sellingSingleOption: true,
-    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/white_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_06_t%C3%B8kke_white.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_06_t%C3%B8kke_white_low.png",
+    imageBackground: "https://tokkes.herokuapp.com/img/white_tokke.png",
+    image: "https://tokkes.herokuapp.com/img/product_models/model_06_t%C3%B8kke_white.png",
+    imageLow: "https://tokkes.herokuapp.com/img/product_models/model_06_t%C3%B8kke_white_low.png",
     type: {
         single: {
             color: "Blanco",
@@ -229,9 +229,9 @@ var tokkeHeartWhite = new Product({
     txtToSell: "Este Tokke en forma de corazón es ideal para regalar a tus seres queridos para que sepan que siempre estás ahí.",
     price: 5,
     sellingSingleOption: true,
-    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/corazon_tokke.png",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_05_t%C3%B8kke_heart_white.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_05_t%C3%B8kke_heart_white_low.png",
+    imageBackground: "https://tokkes.herokuapp.com/img/corazon_tokke.png",
+    image: "https://tokkes.herokuapp.com/img/product_models/model_05_t%C3%B8kke_heart_white.png",
+    imageLow: "https://tokkes.herokuapp.com/img/product_models/model_05_t%C3%B8kke_heart_white_low.png",
     type: {
         single: {
             color: "Blanco",
@@ -248,8 +248,8 @@ var tokkeEasyPack4 = new Product({
     txtToSell: "pending",
     price: 12,
     sellingSingleOption: false,
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_15_t%C3%B8kke_easy_pack_4.png",
-    imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_15_t%C3%B8kke_easy_pack_4_low.png",
+    image: "https://tokkes.herokuapp.com/img/product_models/model_15_t%C3%B8kke_easy_pack_4.png",
+    imageLow: "https://tokkes.herokuapp.com/img/product_models/model_15_t%C3%B8kke_easy_pack_4_low.png",
     type: {
         box: {
             units: [{ _id: new mongoose.mongo.ObjectId(tokkeRed._id.toString()) },
@@ -269,8 +269,8 @@ var tokkeEasyPack8 = new Product({
     txtToSell: "pending",
     price: 20,
     sellingSingleOption: false,
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_16_t%C3%B8kke_easy_pack_8.png",
-  imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_16_t%C3%B8kke_easy_pack_8_low.png",
+    image: "https://tokkes.herokuapp.com/img/product_models/model_16_t%C3%B8kke_easy_pack_8.png",
+  imageLow: "https://tokkes.herokuapp.com/img/product_models/model_16_t%C3%B8kke_easy_pack_8_low.png",
     type: {
         box: {
             units: [{ _id: new mongoose.mongo.ObjectId(tokkeRed._id.toString()) },
@@ -294,9 +294,9 @@ var tokkeBoxLove = new Product({
     txtToSell: "pending",
     price: 30,
     sellingSingleOption: false,
-    imageBackground: "https://thawing-bastion-81148.herokuapp.com/img/header_pack_12_tokkes.jpg",
-    image: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_14_t%C3%B8kke_box-love.png",
-  imageLow: "https://thawing-bastion-81148.herokuapp.com/img/product_models/model_14_t%C3%B8kke_box-love_low.png",
+    imageBackground: "https://tokkes.herokuapp.com/img/header_pack_12_tokkes.jpg",
+    image: "https://tokkes.herokuapp.com/img/product_models/model_14_t%C3%B8kke_box-love.png",
+  imageLow: "https://tokkes.herokuapp.com/img/product_models/model_14_t%C3%B8kke_box-love_low.png",
     type: {
         box: {
             units: [{ _id: new mongoose.mongo.ObjectId(tokkeRed._id.toString()) },

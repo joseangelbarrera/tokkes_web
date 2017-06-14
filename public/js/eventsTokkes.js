@@ -1,3 +1,81 @@
+
+
+$('.list-tokkes .remove').on('click', function(e) {
+  e.preventDefault();
+  const $thisElement = $(this)
+  const url = $thisElement.attr("href")
+  const method = 'DELETE'
+  $.ajax({ url, method })
+    .done ( response => {
+      $thisElement.parents('.list-group-item').remove()
+    })
+    .fail( () =>  alert("Something fails removing this item!") );
+})
+
+
+
+$('.list-tokkes .edit').on('click', function(e) {
+  e.preventDefault();
+  const $thisElement = $(this)
+  $thisElement
+    .parents("li")
+      .find("form input")
+        .removeClass("hidden")
+        .focus()
+        .end()
+      .find("p")
+        .addClass("hidden")
+})
+
+
+$(".edit-form").on("submit", function(e) {
+  e.preventDefault();
+
+  const $thisElement = $(this)
+  const url = $thisElement.attr("action")
+  const editedValue = $thisElement.find('input').val()
+  const method = 'PUT'
+
+  $.ajax({
+    url,
+    method,
+    data: { editedValue }
+  })
+  .done( response => {
+    $thisElement
+      .siblings("p")
+        .text(editedValue)
+        .removeClass("hidden")
+        .end()
+      .find("input")
+        .addClass("hidden")
+    toastr.success(response)
+  })
+  .fail( () =>  alert("Try removing again champ!") );
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $('#phoneBrand_button').on('click', function(e) {
     e.preventDefault()
     var queryModelPhone = $('#phoneModel_input').val();

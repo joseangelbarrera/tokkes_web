@@ -7,8 +7,12 @@ Add your custom styles below
     border: 1px solid red;
 }
 */
-
-
+.regsiterField {
+    position: relative;
+    min-height: 1px;
+padding-left: 0px;
+padding-right: 0px;
+}
 
 .input-without-icon input {
     padding-left: 1.5em;
