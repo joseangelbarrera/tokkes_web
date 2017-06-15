@@ -29,32 +29,36 @@
                   .square-litle
                     img#tokke-modal(src=tokke.imageLow)
                   h3 #{tokke.name}: Configurador de Llamada
-              form
+              form(action="/cart", method="POST", id=tokke.name)
                 p.second_action 1º ¿Dónde quieres llamar?
                 #QuestionD.input-with-icon.dropdown
-                  select
+                  input(name="id", value=tokke.id, type="hidden")
+                  input(name="name", value=tokke.name, type="hidden")
+                  input(name="price", value=tokke.price, type="hidden")
+                  input(name="actionType", value='make a call', type="hidden")
+                  select(naem="select", required='', title='Debes seleccionar una opción.')
                     option.text-center(selected='', disabled='')  SELECCIONA AQUÍ DÓNDE LLAMAR  &darr;
-                    option(value='112_call') LLAMADA DE URGENCIA (ej.112)
-                    option(value='contact_call') LLAMADA A UN CONTACTO
-                    option(value='police_call') LLAMADA A LA POLICIA
-                    option(value='firemans_call') LLAMADA A LOS BOMBEROS
-                    option(value='hospital_call') LLAMADA AL HOSPITAL
-                    option(value='gender_violence') SOS VIOLENCIA DE GENERO
+                    option(name='112_call', value='112_call') LLAMADA DE URGENCIA (ej.112)
+                    option(name='contact_call', value='contact_call') LLAMADA A UN CONTACTO
+                    option(name='police_call', value='police_call') LLAMADA A LA POLICIA
+                    option(name='firemans_call', value='firemans_call') LLAMADA A LOS BOMBEROS
+                    option(name='hospital_call', value='hospital_call') LLAMADA AL HOSPITAL
+                    option(name='gender_violence', value='gender_violence') SOS VIOLENCIA DE GENERO
                   .input-with-icon
                     p 2º ¿Desde qué teléfono se llamará?
-                    label(for='origin-phone')
+                    label(for='originPhone')
                     i.icon-Phone-Wifi
-                    input#origin-phone.tokke-message(name='origin-phone', type='tel', pattern='[0-9]{9}', required='', placeholder='Escribe aquí el número de teléfono de origen')
+                    input#originPhone.tokke-message(name='originPhone', type='tel', pattern='[0-9]{9}', required='', title='El formato debe coincidir con 9 números.', placeholder='Escribe aquí los 9 números del teléfono de origen')
                   .input-with-icon
                     p 3º ¿A qué número de teléfono se llamará?
-                    label(for='destination-phone')
+                    label(for='destinyPhone')
                     i.icon-Smartphone-4
-                    input#destination-phone(name='destination-phone', type='tel', pattern='[0-9]{9}', required='', placeholder='Escribe aquí el número el teléfono de destino')
+                    input#destinyPhone(name='destinyPhone', type='tel', pattern='[0-9]{9}', required='', title='El formato debe coincidir con 9 números.', placeholder='Escribe aquí los 9 números del teléfono de destino')
                   .text-center
                     p.text-left 4º Guarda para seguir configurando todos los Tøkkes que desees pre-ordenar.
-                    #config_button.text-center.top.btn-block.modal-close
-                      button#config_button_1.btn.btn-danger.btn-lg(type='button')  Cancelar
-                      button#config_button_3.btn.btn-primary.btn-lg(type='button', href='#')  guardar
+                    #config_button.text-center.top.btn-block
+                      button#config_button_1.btn.btn-danger.btn-lg.modal-close(type='button')  Cancelar
+                      button#config_button_3.btn.btn-primary.btn-lg.modal-close(type='submit')  Guardar
       .modal-instance
         // MODAL INSTANCE
         a#config_button0.btn.modal-trigger.btn-info.btn-block(href='#')
@@ -73,35 +77,39 @@
                   .square-litle
                     img#tokke-modal-2(src=tokke.imageLow)
                   h3 #{tokke.name}: Configurador de Mensaje
-              form
+              form(action="/cart", method="POST", id=tokke._id)
                 p.second_action 1º ¿Qué tipo de mensaje quieres enviar?
                 #QuestionD.input-with-icon.dropdown
-                  select#QuestionOptionsTwo
+                  input(name="id", value=tokke.id, type="hidden")
+                  input(name="name", value=tokke.name, type="hidden")
+                  input(name="price", value=tokke.price, type="hidden")
+                  input(name="actionType", value='send a message', type="hidden")
+                  select#QuestionOptionsTwo(required='', title='Debes seleccionar una opción.')
                     option.text-center(selected='', disabled='')  SELECCIONA UN TIPO DE MENSAJE  &darr;
                     option(value='contact_sms') SMS A UN CONTACTO
                     option(value='contact_whatsapp') WHATSAPP A UN CONTACTO
                   .input-with-icon
                     p 2º ¿Desde qué número se enviará el mensaje?
-                    label(for='origin-phone')
+                    label(for='originMsgPhone')
                     i.icon-Phone-Wifi
-                    input#origin-msg-phone.tokke-message(name='origin-msg-phone', type='tel', pattern='[0-9]{9}', required='', placeholder='Escribe aquí el número del teléfono de origen')
+                    input#originMsgPhone.tokke-message(name='originMsgPhone', type='tel', pattern='[0-9]{9}', required='', title='El formato debe coincidir con 9 números.', placeholder='Escribe aquí el número del teléfono de origen')
                   .input-with-icon
                     p 3º ¿A qué teléfono se enviará el mensaje
-                    label(for='destination-phone')
+                    label(for='destinyPhone')
                     i.icon-Smartphone-4
-                    input#destination-msg-phone(name='destination-msg-phone', type='tel', required='', placeholder='Escribe el teléfono de destino')
+                    input#destinyPhone(name='destinyPhone', type='tel', required='', title='El formato debe coincidir con 9 números.', placeholder='Escribe el teléfono de destino')
                   .input-with-icon
                     p 4º ¿Cuál es el mensaje que deseas enviar?
-                    label(for='message-to-send')
+                    label(for='messageTxt')
                     i.icon.normal-text
-                    textarea#message-to-send.validate-required(maxlength='140', x4='', name='message-to-send', type='text', required='', placeholder='Mensaje a enviar. Máximo 160 caracteres contando espacios.')
+                    textarea#messageTxt.validate-required(maxlength='140', x4='', name='messageTxt', type='text', required='', title='El texto es obligatorio y debe contener un máximo de 160 caracteres incluídos espacios.', placeholder='Mensaje a enviar. Máximo 160 caracteres contando espacios.')
                   .text-center
                     p.text-left 6º Guarda y sigue configurando tus Tøkkes.
-                    #config_button.text-center.top.btn-block.modal-close
-                      button#config_button_1.btn.btn-danger.btn-lg(type='button')  Cancelar
-                      button#config_button_3.btn.btn-primary.btn-lg(type='button', href='#')  guardar
+                    #config_button.text-center.top.btn-block
+                      button#config_button_1.btn.btn-danger.btn-lg.modal-close(type='button')  Cancelar
+                      button#config_button_3.btn.btn-primary.btn-lg.modal-close(type='submit')  guardar
         #config_button.text-center.top.btn-block
-          button#config_button_1.btn.btn-danger.btn-lg.list-tokkes.remove(type='button')  eliminar
+          button#config_button_1.btn.btn-danger.btn-lg.list-tokkes.remove(type='button', onsubmit='')  eliminar
           button#config_button_2.btn.btn-primary.btn-lg(type='button')  duplicar
   // card
 // end tokke red

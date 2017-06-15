@@ -51,7 +51,7 @@ $(".edit-form").on("submit", function(e) {
         .addClass("hidden")
     toastr.success(response)
   })
-  .fail( () =>  alert("Try removing again champ!") );
+  .fail( () =>  alert("Something fails editing this item!") );
 
 
 })
@@ -116,8 +116,6 @@ $('#phoneBrand_button').on('click', function(e) {
         }
     })
 })
-
-
 
 
 

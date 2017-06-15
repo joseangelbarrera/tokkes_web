@@ -207,11 +207,11 @@ option {
 
 
 
-#origin-msg-phone,
-#destination-msg-phone,
-#origin-phone,
-#destination-phone,
-#message-to-send {
+#originPhone,
+#destinyPhone,
+#originMsgPhone,
+#destinyMsgPhone,
+#messageTxt {
     background: white;
     color: #284e9a;
     border-radius: 0px;
@@ -278,6 +278,7 @@ option {
     border-color: #1f88be;
 }
 
+
 #config_button {
     display: flex;
     margin-top: 10px;
@@ -304,6 +305,7 @@ option {
              padding-right: 0em; 
      padding-left: 0em; 
 }
+
 
 
 #config_button_3 {

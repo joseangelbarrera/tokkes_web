@@ -51,14 +51,23 @@ var orderSchema = new Schema({
 
                     { originPhone: {
                                     type: Number,
-                                    required: true
                                } },
 
                     { destinyPhone: {
                                    type: Number,
-                                   required: true
-                               } },
 
+                                } },
+
+                    { originMsgPhone: {
+                                    type: Number,
+
+                                } },
+
+                    { destinyMsgPhone: {
+                                   type: Number,
+
+                                 } },
+                               
                     { messageTxt: {
                                     type: String,
                                     maxlength: 160,

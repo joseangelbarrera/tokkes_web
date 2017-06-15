@@ -65,3 +65,21 @@ mongo ds115352.mlab.com:15352/tokkes-products -u admin -p 100
 To connect using a driver via the standard MongoDB URI (what's this?):
 mongodb://<dbuser>:<dbpassword>@ds115352.mlab.com:15352/tokkes-products
 
+
+----
+
+
+\b\d{3}[-.]?\d{3}[-.]?\d{3}\b
+
+
+Expresiones regualres para un teléfono con 9 números
+
+text.match(/\b\d{3}[-.?\s]?\d{3}[-.\s]?\d{3}\b/ig);
+
+
+email
+
+text.match(/^([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/igm);
+
+<input required pattern="/\b\d{3}[-.?\s]?\d{3}[-.\s]?\d{3}\b/ig)"> </input>
+
