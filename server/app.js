@@ -50,23 +50,11 @@ app.use(session({
 app.use((req, res, next) => {
     const cart = req.session.cart = req.session.cart || []
     if (cart.ocals) delete cart._locals
-    console.log('req.session => ', req.session)
-    console.log('req.session.cart => ', req.session.cart)
     const cartContent = req.session.cart
-    console.log('cart.content => ', cartContent)
     cartItems = cartContent.length
-    console.log('cartIds =>'+ cartIds)
-    const cartIds2 = cartIds[2]
-    console.log('cartIds2 =>'+ cartIds2)
-    console.log(cartContent)
-    console.log('cartContent[1].id =>' + cartContent[1].id)
-    console.log('cartContent[0].actionType =>' + cartContent[0].actionType)
-    let cartNames = cartContent.map(x => x.name)
+    cartNames = cartContent.map(x => x.name)
     console.log('cartNames =>'+ cartNames)
-
-console.log(cartItems)
-next();
-
+    next();
 });
 
 app.use(routesHome)
