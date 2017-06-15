@@ -3,7 +3,7 @@
   .card.card-1.shadow_price
     .card__image
       - const test = cartNames.find(x => x === tokke.name)
-      img.tokkeImage(alt='Pic', data-test=test, val=tokke.name, src=(test === tokke.name ? tokke.imageLow : tokke.imageBackground))
+      img.tokkeImage(alt='Pic', data-test=test, val=tokke.name, src=(test === tokke.name ? 'https://tokkes.herokuapp.com/img/product_models/preconfigured_by_user.png' : tokke.imageBackground))
     .card__body.boxed.bg--white
       .card__title
         h4 #{tokke.defaultFunction}
@@ -49,7 +49,7 @@
                     p 2º ¿Desde qué teléfono se llamará?
                     label(for='originPhone')
                     i.icon-Phone-Wifi
-                    input#originPhone.tokke-message(name='originPhone', type='tel', pattern='[0-9]{9}', required='', title='El formato debe coincidir con 9 números.', placeholder='Escribe aquí los 9 números del teléfono de origen')
+                    input#originPhone.tokke-message(name='originPhone', type='tel', pattern='[0-9]{9}|[0-9]{3}', required='', title='El formato debe coincidir con 9 números.', placeholder='Escribe aquí los 9 números del teléfono de origen')
                   .input-with-icon
                     p 3º ¿A qué número de teléfono se llamará?
                     label(for='destinyPhone')
