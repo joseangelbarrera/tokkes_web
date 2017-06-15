@@ -1,3 +1,4 @@
+
 function addToCart(req, res) {
     let {
         _id,
@@ -27,8 +28,10 @@ function addToCart(req, res) {
         destinyMsgPhone,
         messageTxt
     }
-    console.log(newItem)
+
     const session = req.session.cart.push(newItem)
+    console.log('this is the session' + newItem.name)
+    console.log('this is the id of the product ' + newItem.id)
     res.redirect('/tokkes')
 }
 

@@ -19,14 +19,14 @@ block content
 						|
 						a.btn(href="shop-cart-tokkes.html")
 							span.btn__text PREORDENAR TØKKES
-		.modal-container(data-autoshow='500')
+		#only-once.modal-container(data-autoshow=(cartItems > 0 ? false : true ))
 			.modal-content.height--natural
 				.card.card-1
 					.card__image.bg--white
 						img(alt='Pic', src='img/tokke_modal.jpg')
 					.card__body.boxed.bg--white.text-center
 						.card__title
-							h4 Configura aquí tus Tøkkes antes de realizar tu Pre-Orden.
+							h4 Configura aquí tus Tøkkes antes de realizar tu Pre-Orden. 
 						p
 							| "Duplica" o "Elimina" Tøkkes para seleccionar el tipo y número que
 							| deseas configurar.

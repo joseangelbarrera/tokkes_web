@@ -47,8 +47,13 @@ app.use(session({
 
 app.use( (req, res, next) => {
   const cart = req.session.cart = req.session.cart || []
-  if ( cart._locals ) delete cart._locals
-  console.log('req.session => ', req.session);
+  if ( cart.ocals ) delete cart._locals
+  console.log('req.session => ', req.session)
+  console.log('req.session.cart => ', req.session.cart)
+  const cartContent = req.session.cart
+  cartItems = cartContent.length
+  console.log(cartContent.length)
+  console.log(cartItems)
   next();
 });
 
