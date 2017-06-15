@@ -19,7 +19,7 @@ var tokkeYellow = new Product({
     price: 5,
     sellingSingleOption: true,
     imageBackground: "https://tokkes.herokuapp.com/img/amarillo_tokke.png",
-    image: "https://tokkes.herokuapp.com/img/product_models/model_01_t%C3%B8kke_yellow_soft.png",
+    image: "https://tokkes.herokuapp.com/img/product_models/model_01_t%C3%B8kke_yellow.png",
     imageLow: "https://tokkes.herokuapp.com/img/product_models/model_01_t%C3%B8kke_yellow_low.png",
     type: {
         single: {

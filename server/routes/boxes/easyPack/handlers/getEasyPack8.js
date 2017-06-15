@@ -7,7 +7,7 @@ function getEasyPack8(req, res) {
     Product.find(queryBoxWithNumItems)
         .populate('type.box.units')
         .then(boxTokkes => {
-            res.render('buy/boxes/easyPack8/index', { boxTokkes: boxTokkes[0].type.box.units })
+            res.render('buy/boxes/easyPack8/index', { boxTokkes: boxTokkes[0].type.box.units, idEasyPack8:boxTokkes[0].id })
         })
 }
 

@@ -1,5 +1,5 @@
 
-function addToCart(req, res) {
+function addToCartBoxLove(req, res) {
     let {
         _id,
         id,
@@ -14,7 +14,7 @@ function addToCart(req, res) {
         destinyMsgPhone,
         messageTxt
     } = req.body
-    const newItem = {
+    const newItemBoxLove = {
         _id,
         id,
         name,
@@ -29,8 +29,8 @@ function addToCart(req, res) {
         messageTxt
     }
 
-    const session = req.session.cart.push(newItem)
-    res.redirect('/tokkes')
+    const session = req.session.cart.push(newItemBoxLove)
+    res.redirect('/box/love')
 }
 
-module.exports = addToCart
+module.exports = addToCartBoxLove

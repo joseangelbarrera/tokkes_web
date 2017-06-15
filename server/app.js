@@ -22,6 +22,7 @@ const routesAtHome = require('./routes/tokkesHome')
 const routesPhoneSetup = require('./routes/phonesetup')
 const routesFaq = require('./routes/faq')
 const routesCart = require('./routes/cart')
+const routesCartBoxLove = require('./routes/cartBoxLove')
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -39,14 +40,7 @@ app.use(session({
     store: new FileStore()
 }));
 
-// app.use(bodyParser.urlencoded({
-//   extended: false
-// }))
-// app.use(bodyParser.json())
-// console.log(bodyParser.json())
 
-
-// cartContent.filter(x => x.id === tokke.id)) === tokke.id ?  tokke.imageBackground : tokke.imageLow
 app.use((req, res, next) => {
     const cart = req.session.cart = req.session.cart || []
     if (cart.ocals) delete cart._locals
@@ -73,6 +67,7 @@ app.use(routesAtHome)
 app.use(routesPhoneSetup)
 app.use(routesFaq)
 app.use(routesCart)
+app.use(routesCartBoxLove)
 
 module.exports = app
 

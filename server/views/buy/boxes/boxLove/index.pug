@@ -20,7 +20,7 @@ block content
 							|
 						a.btn(href="shop-cart-tokkes.html")
 							span.btn__text PREORDENAR BOX LOVE DE 12 TØKKES
-		.modal-container(data-autoshow='500')
+		#only-once.modal-container(data-autoshow=(cartItems > 0 ? false : true ))
 			.modal-content.height--natural
 				.card.card-1
 					.card__image.bg--white

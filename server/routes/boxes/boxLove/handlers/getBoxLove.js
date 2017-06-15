@@ -6,7 +6,7 @@ function getBoxLove(req, res) {
     Product.find(queryBoxWithNumItems)
         .populate('type.box.units')
         .then(boxTokkes => {
-            res.render('buy/boxes/boxLove/index', { boxTokkes: boxTokkes[0].type.box.units })
+            res.render('buy/boxes/boxLove/index', { boxTokkes: boxTokkes[0].type.box.units, idBox:boxTokkes[0].id })
         })
 }
 
