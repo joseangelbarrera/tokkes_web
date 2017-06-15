@@ -23,7 +23,6 @@ const routesPhoneSetup = require('./routes/phonesetup')
 const routesFaq = require('./routes/faq')
 const routesCart = require('./routes/cart')
 
-
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
@@ -40,18 +39,18 @@ app.use(session({
   store: new FileStore()
 }));
 
-app.use(bodyParser.urlencoded({
-  extended: false
-}))
-app.use(bodyParser.json())
+// app.use(bodyParser.urlencoded({
+//   extended: false
+// }))
+// app.use(bodyParser.json())
+// console.log(bodyParser.json())
 
 app.use( (req, res, next) => {
-  const cart = req.session.cart = req.session.cart || {}
+  const cart = req.session.cart = req.session.cart || []
   if ( cart._locals ) delete cart._locals
-  // console.log('req.session => ', req.session);
+  console.log('req.session => ', req.session);
   next();
 });
-
 
 app.use(routesHome)
 app.use(routesTokke)
@@ -69,7 +68,6 @@ app.use (routesAtHome)
 app.use (routesPhoneSetup)
 app.use (routesFaq)
 app.use (routesCart)
-
 
 module.exports = app
 

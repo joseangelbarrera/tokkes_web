@@ -1,5 +1,59 @@
 
 
+// $('#config_button_3').click(function() {
+//   alert( "Configuración salvada correctamente, contiunua configurando tus Tøkkes." );
+// });
+
+
+// $('#config_button_4').click(function() {
+//   alert( "Configuración salvada correctamente, contiunua configurando tus Tøkkes." );
+// });
+
+// $('#config_button_1').remove('#config_button_1') {
+
+// $('#config_button_1').click(function() {
+//   alert( "Tokke borrado correctamente, contiunua configurando tus Tøkkes." );
+// });
+
+// $('#config_button_1').click(function() {
+//   alert( "Tokke borrado correctamente, contiunua configurando tus Tøkkes." );
+// });
+
+
+// $('.#config_button_1').on('click', function(e) {
+//   e.preventDefault();
+//   const $thisElement = $(this)
+//   const url = $thisElement.attr("href")
+//   const method = 'DELETE'
+//   $.ajax({ url, method })
+//     .done( response => {
+//       toastr.success(response)
+//       $thisElement.parents('.list-group-item').remove()
+//     })
+//     .fail( () =>  alert("Try removing again champ!") );
+// })
+
+
+$('a.remove').on('click', function (e) {
+  e.preventDefault()
+  const url = $(this).attr('href')
+  const $item = $(this).closest('tr')
+  $.ajax({
+    url,
+    method: 'DELETE'
+  })
+  .done(function (msg) {
+    alert(msg)
+    $item.remove()
+  })
+  .fail(function (err) {
+    console.log(err)
+  })
+})
+
+
+
+
 $('.list-tokkes .remove').on('click', function(e) {
   e.preventDefault();
   const $thisElement = $(this)

@@ -1,6 +1,9 @@
 function addToCart(req, res) {
     let {
         _id,
+        id,
+        name,
+        price,
         actionType,
         makePhoneCall,
         sendMessage,
@@ -10,9 +13,11 @@ function addToCart(req, res) {
         destinyMsgPhone,
         messageTxt
     } = req.body
-    console.log(req.body)
     const newItem = {
         _id,
+        id,
+        name,
+        price,
         actionType,
         makePhoneCall,
         sendMessage,
@@ -23,11 +28,13 @@ function addToCart(req, res) {
         messageTxt
     }
     console.log(newItem)
-    // req.session.cart.push(newItem)
-    // res.redirect('/tokkes')
+    const session = req.session.cart.push(newItem)
+    res.redirect('/tokkes')
 }
 
 module.exports = addToCart
+
+
 
 
 

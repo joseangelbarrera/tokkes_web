@@ -29,7 +29,7 @@
                   .square-litle
                     img#tokke-modal(src=tokke.imageLow)
                   h3 #{tokke.name}: Configurador de Llamada
-              form(action="/cart", method="POST", id=tokke.name)
+              form(action="/tokkes", method="POST", id=tokke.name)
                 p.second_action 1º ¿Dónde quieres llamar?
                 #QuestionD.input-with-icon.dropdown
                   input(name="id", value=tokke.id, type="hidden")
@@ -77,7 +77,7 @@
                   .square-litle
                     img#tokke-modal-2(src=tokke.imageLow)
                   h3 #{tokke.name}: Configurador de Mensaje
-              form(action="/cart", method="POST", id=tokke._id)
+              form(action="/tokkes", method="POST", id=tokke._id)
                 p.second_action 1º ¿Qué tipo de mensaje quieres enviar?
                 #QuestionD.input-with-icon.dropdown
                   input(name="id", value=tokke.id, type="hidden")

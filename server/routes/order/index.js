@@ -1,9 +1,8 @@
-
 const express = require('express')
 const router = express.Router()
 
-const addToCart = require('./handlers/addToCart')
+const addToOrder = require('./handlers/addToOrder')
 
-router.post('/tokkes', addToCart)
+router.post('/order', addToOrder)
 
 module.exports = router
