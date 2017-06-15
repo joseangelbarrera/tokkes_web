@@ -3,11 +3,14 @@ $('#config_button_3').click(function() {
 });
 
 
-$(document).ready(function(){
-      $("#config_button_3").click(function(){
-          $(".tokkeImage").attr("src",tokke.imageLow);
-      });
+$("#config_button_3").on('click', function(){
+  console.log('click boton 3')
+    $(".tokkeImage").attr("src",tokke.imageLow);
 });
+
+$("#config_button_4").click(function(){
+        $(".tokkeImage").attr("src",tokke.imageLow);
+    });
 
 
 // $('#config_button_4').click(function() {

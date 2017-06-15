@@ -26,17 +26,17 @@ const routesCart = require('./routes/cart')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.use( express.static(path.join(__dirname, '../public')) )
+app.use(express.static(path.join(__dirname, '../public')))
 
 app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, 'views'))
 
 app.use(session({
-  name: 'tokkes-session-cookie-id',
-  secret: 'sd987sd89fsd9fsd9f8',
-  saveUninitialized: true,
-  resave: true,
-  store: new FileStore()
+    name: 'tokkes-session-cookie-id',
+    secret: 'sd987sd89fsd9fsd9f8',
+    saveUninitialized: true,
+    resave: true,
+    store: new FileStore()
 }));
 
 // app.use(bodyParser.urlencoded({
@@ -45,34 +45,47 @@ app.use(session({
 // app.use(bodyParser.json())
 // console.log(bodyParser.json())
 
-app.use( (req, res, next) => {
-  const cart = req.session.cart = req.session.cart || []
-  if ( cart.ocals ) delete cart._locals
-  console.log('req.session => ', req.session)
-  console.log('req.session.cart => ', req.session.cart)
-  const cartContent = req.session.cart
-  cartItems = cartContent.length
-  console.log(cartContent.length)
-  console.log(cartItems)
-  next();
+
+// cartContent.filter(x => x.id === tokke.id)) === tokke.id ?  tokke.imageBackground : tokke.imageLow
+app.use((req, res, next) => {
+    const cart = req.session.cart = req.session.cart || []
+    if (cart.ocals) delete cart._locals
+    console.log('req.session => ', req.session)
+    console.log('req.session.cart => ', req.session.cart)
+    const cartContent = req.session.cart
+    console.log('cart.content => ', cartContent)
+    cartItems = cartContent.length
+    cartIds = cartContent.map(x => x.id)
+    console.log('cartIds =>'+ cartIds)
+    const cartIds2 = cartIds[2]
+    console.log('cartIds2 =>'+ cartIds2)
+    console.log(cartContent)
+    console.log('cartContent[1].id =>' + cartContent[1].id)
+    console.log('cartContent[0].actionType =>' + cartContent[0].actionType)
+    cartNames = cartContent.map(x => x.name)
+    console.log('cartNames =>'+ cartNames)
+
+console.log(cartItems)
+next();
+
 });
 
 app.use(routesHome)
 app.use(routesTokke)
 app.use(routesTokkes)
-app.use (routesBoxLove)
-app.use (routesEasyPack4)
-app.use (routesEasyPack8)
-app.use (routesLegal)
-app.use (routesLegalDischarge)
-app.use (routesInfo)
-app.use (routesTokkesSetup)
-app.use (routesTech)
-app.use (routesCompatible)
-app.use (routesAtHome)
-app.use (routesPhoneSetup)
-app.use (routesFaq)
-app.use (routesCart)
+app.use(routesBoxLove)
+app.use(routesEasyPack4)
+app.use(routesEasyPack8)
+app.use(routesLegal)
+app.use(routesLegalDischarge)
+app.use(routesInfo)
+app.use(routesTokkesSetup)
+app.use(routesTech)
+app.use(routesCompatible)
+app.use(routesAtHome)
+app.use(routesPhoneSetup)
+app.use(routesFaq)
+app.use(routesCart)
 
 module.exports = app
 
@@ -151,6 +164,3 @@ module.exports = app
 //           res.json( boxTokkes[0].type.box.units )
 //       })
 // })
-
-
-

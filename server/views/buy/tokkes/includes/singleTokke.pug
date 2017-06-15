@@ -2,7 +2,8 @@
   // - tokke Red
   .card.card-1.shadow_price
     .card__image
-      img(alt='Pic', src=tokke.imageBackground)
+      - const test = cartNames.find(x => x === tokke.name)
+      img.tokkeImage(alt='Pic', data-test=test, val=tokke.name, src=(test === tokke.name ? tokke.imageLow : tokke.imageBackground))
     .card__body.boxed.bg--white
       .card__title
         h4 #{tokke.defaultFunction}
@@ -107,7 +108,7 @@
                     p.text-left 6º Guarda y sigue configurando tus Tøkkes.
                     #config_button.text-center.top.btn-block
                       button#config_button_1.btn.btn-danger.btn-lg.modal-close(type='button')  Cancelar
-                      button#config_button_3.btn.btn-primary.btn-lg.modal-close(type='submit')  guardar
+                      button#config_button_4.btn.btn-primary.btn-lg.modal-close(type='submit')  guardar
         #config_button.text-center.top.btn-block
           button#config_button_1.btn.btn-danger.btn-lg.list-tokkes.remove(type='button', onsubmit='')  eliminar
           button#config_button_2.btn.btn-primary.btn-lg(type='button')  duplicar
