@@ -55,14 +55,13 @@ app.use((req, res, next) => {
     const cartContent = req.session.cart
     console.log('cart.content => ', cartContent)
     cartItems = cartContent.length
-    cartIds = cartContent.map(x => x.id)
     console.log('cartIds =>'+ cartIds)
     const cartIds2 = cartIds[2]
     console.log('cartIds2 =>'+ cartIds2)
     console.log(cartContent)
     console.log('cartContent[1].id =>' + cartContent[1].id)
     console.log('cartContent[0].actionType =>' + cartContent[0].actionType)
-    cartNames = cartContent.map(x => x.name)
+    let cartNames = cartContent.map(x => x.name)
     console.log('cartNames =>'+ cartNames)
 
 console.log(cartItems)
