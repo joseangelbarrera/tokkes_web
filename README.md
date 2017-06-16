@@ -1,225 +1,70 @@
-db.products.find({ $where : "this.type.box.units.length === 4" }).count()
+# TØKKES: ***Your home a little bit more secure.***
 
+This repo contains my full-stack project Tøkkes built during the Skylab Bootcamp in Barcelona.
 
+Tøkkes are NFC devices that including NFC tags ready to to some task instantly with your phone without unblock it nor introduce any password or code.
 
-# TØKKES README TEST
+Tøkkes is perfect to add a bit more of security in homes worldwide. Tøkkes is easy, cheap and only need to be configured before starting. This app tries to facilitate this part and boots the purchase of these products.
 
+The main idea of this app is to provide an environment where anyone could set up the NFC tags, and order their own customized Tøkkes.
 
-# Number one
+## Tøkkes app
+
+![header](public/img/logs_dependencies.png)
+
+## Installation
+
+ We asume we have installed node, mongoDB and nodemon in our computer. Otherwise, install this packages.
+
+https://nodejs.org/es/
+https://nodemon.io/
+https://www.mongodb.com/
+
+* ### .env file configuration:
+
+You need to create an .env file in the project root with the following environment variables configured:
+
+*Port:* PORT=3000
+
+*Mongodb path and database to use:* DB_URI=mongodb://localhost:27017/\< database_name \>
+
+* ### Run the server:
+
+`npm start`
+
+All dependencies will be installed automatically
+
+* ### API
+
+In order to know  your device NFC compatibility, our app works with **fonoapi**, a API service that offers for free the features from any mobile device, including if they include NFC tehnology. You can see the web and the github repository below this lines:
 
 https://github.com/mtrung/fonoapi
 
+It is necesary a token: \*\*\*\*\*\*\*\*\*\*. you can adquire yours in this url: https://fonoapi.freshpixl.com/
 
-token
-a78378230469cf28c26fee3da80ff146a4fec4ea3c650243
 
+## Built with:
 
-available options
+* SublimeText
 
-* brand - It gives the latest you can filter the brand (example : "samsung", "htc")
+### Front-end
+* Bootstrap: 3.3.7
+* bootstrap 3.3.7
+* jquery": 3.2.1
+* pug: 2.0.0-rc.2
+* first html was custom developed version of Pillar Mediumrere[template](http://madewith.mediumra.re/)
 
-* limit - limit the result count (Max 100)
+### Back-end
+* express: 4.15.3
+* express-session: "^1.15.3
+* dotenv: 4.0.0
+* body-parser: 1.17.2
+* bower: 1.8.0
+* mongoose: 4.9.0
+* body-parser: 1.17.1
+* nodemon: 1.11.0
+* * session-file-store: 1.0.0
 
-* token* -
+## Autor
 
-# Number two
-
-https://github.com/shakee93
-
-
-
-# other webs
-
-http://www.phonearena.com/
-
-https://www.nfcworld.com/nfc-phones-list/
-
-
-
-info:
-
-https://www.androidpit.com/what-is-nfc
-https://www.tagnfc.com/en/info/7-nfc-enabled-devices
-
-
-
-Apps to know if you have the NFC installed:
-https://play.google.com/store/apps/details?id=com.promethylhosting.nfc.test
-
-
-selection:
-
-http://be.beantownthemes.com/html/content/vpn/faq-and-contact.html
-
-çhttp://be.beantownthemes.com/html/content/copywriter/contact.html
-
-http://preview.oklerthemes.com/porto/5.7.2/demo-business-consulting.html
-
-SALIENT
-http://themenectar.com/demo/salient-service/
-http://themenectar.com/demo/salient-app/#
-
-
-## CONDICIONES DEL SERVICIO
-
-NOTA: En ningún caso la empresa será responsable de ningún daño directo, indirecto, punitivo, fortuito, especial o consecuente, a la propiedad o la vida, que surja de o en relación con el uso o mal uso de nuestros productos.
-
-
-## ABOUT ADMIN PANEL
-http://demos.creative-tim.com/light-bootstrap-dashboard/dashboard
-
-## ABOUT THE COMPATIBLE PHONE LIST
-
-http://demos.creative-tim.com/fresh-bootstrap-table-tutorial
-
-
-
-```
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
-
-var tokkesSchema = new Schema({
-    task: String,
-    dateOfCreation: {
-        type: Number,
-        default: +new Date
-    },
-    dateOfUpdate: Number,
-    completed: {
-        type: Boolean, 
-        default: false
-     }
-})
-
-const tokkesModel = mongoose.model('tokkesModel', tokkesSchema);
-module.exports = tokkesModel
-```
-
-
-
-## DEFINNING TØKKES
-
-**Color**
-red
-yellow
-green
-blue
-orange
-magenta
-white_circle
-white_heart
-red_ligth
-yellow_ligth
-green_ligth
-blue_ligth
-
-**Kind of action by default with select - option**
-112_call: String, "Llamada al 112"
-contact_call: String, "Llamada a un contacto"
-police_call: String, "Llamada a la Policia"
-firemans_call: String, "Llamada a los Bomberos"
-hospital_call: String, "Llamada al Hospital"
-gender_violence: String, "Violencia de Género"
-
-contact_sms: String, "SMS a un contacto"
-contact_whatsapp: String, "Whatsapp a un contacto"
-account_twiter: String, "Mensaje por Twiter a una cuenta"
-
-**Phone origin**
-phone_origin: number, 
-
-**Phone destination**
-phone_destination: number, requerid
-
-**Kind of message**
-call_message: null
-sms_message:  string, max 160 characters
-twitter_message:  string, max 140 characters
-whatsapp_message:  string, max 250 characters
-
-**Send Location**
-send_location: boolean
-
-
-## DEFINNING TRANSACTIONS
-
-client_id
-product_id
-total_price
-
-## DEFINNING USERS
-
-id: String, tamaño máximo 300
-username: String, tamaño máximo 50, required
-first_name: String, tamaño máximo 50
-first_surname: String, tamaño máximo 50
-second_surname: String, tamaño máximo 50
-phone: Number, tamaño máximo 12
-email: String, tamaño máximo 50
-password: String, tamaño máximo 15, tamaño mínimo 6
-buyed_items
-address_details
-id_document: tamaño máximo 15
-
-date_of_creation: {
-        type: Number,
-        default: +new Date
-    },
-date_of_update: {
-        type: Number,
-    },
-date_of_birth: {
-        type: Number,
-    },
-
-**purchase:**
-
-box-love_tøkkes_12: Number (configuration: boolean)
-tøkkes pack_8: Number (configuration: boolean)
-tøkkes_pack_4: Number (configuration: boolean)
-single_units: Number (configuration: boolean)
-
-
-**address:**
-
-kind_of_via: String, tamaño máximo 3 */
-street name: String, tamaño máximo 100
-house_number: Number, tamaño máximo 5
-square: String, tamaño máximo 5,
-portal: String, tamaño máximo 5,
-floor: String, tamaño máximo 5,
-stairs: String, tamaño máximo 5,
-door: String,  tamaño máximo 5, 
-postal_code_ZIP: Number, tamaño máximo 5 nacional, 10 internacional
-town_locality_name: String,  tamaño máximo 100
-province_state: String, tamaño máximo 40
-adictional_info_to_sender: String, tamaño máximo 100
-country: String, tamaño máximo 2 **/
-phone_destionation_contact: Number
-
-
-
-
-*/ Alameda, Autopista, Autovía, Avenida, Bulevar, Calle, Camino, Carretera, Glorieta, Otros, Pasaje, Paseo, Plaza, Ronda, Sector, Travesía, Vía // // Boulevard, Freeway, Freeway, Avenue, Boulevard, Street , Road, Road, roundabout, Others, Passage, Promenade, Square, Round, Sector, Crossing, Via
-
-**/ obligatorio para envios internacionales Ç/ Anexo III Tabla de códigos ISO de países y territorios
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+José Ángel Barrera
