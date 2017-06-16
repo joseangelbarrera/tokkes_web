@@ -23,6 +23,7 @@ const routesPhoneSetup = require('./routes/phonesetup')
 const routesFaq = require('./routes/faq')
 const routesCart = require('./routes/cart')
 const routesCartBoxLove = require('./routes/cartBoxLove')
+const routesThanks = require('./routes/thanks')
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -40,14 +41,12 @@ app.use(session({
     store: new FileStore()
 }));
 
-
 app.use((req, res, next) => {
     const cart = req.session.cart = req.session.cart || []
     if (cart.ocals) delete cart._locals
     const cartContent = req.session.cart
     cartItems = cartContent.length
     cartNames = cartContent.map(x => x.name)
-    console.log('cartNames =>'+ cartNames)
     next();
 });
 
@@ -68,81 +67,6 @@ app.use(routesPhoneSetup)
 app.use(routesFaq)
 app.use(routesCart)
 app.use(routesCartBoxLove)
+app.use(routesThanks)
 
 module.exports = app
-
-
-/* --------------------------------------- */
-
-
-
-// app.get('/contact', (req, res) => { res.render('forms/contact.pug') })
-// app.get('/login', (req, res) => { res.render('forms/login.pug') })
-// app.get('/recover', (req, res) => { res.render('forms/recover.pug') })
-// app.get('/tokkes', (req, res) => { res.render('buy/tokkes') })
-
-// app.get('/box/easyPack/:numItems', )
-// app.get('/box/love', (req, res) => { res.render('box/love') })
-
-
-// SIN MODULARIZAR //
-
-// single tokke route
-
-// const queryAreSellingSingle = { "sellingSingleOption": { exist: true } }
-// app.get('/tokkes', (req, res) => {
-//     Product.find(queryAreSellingSingle)
-//         .then(tokkes => {
-//             res.render('buy/tokkes/index', { tokkes })
-//         })
-// })
-
-// // box love route
-
-// app.get('/box/love', (req, res) => {
-//     const queryBoxWithNumItems = { $where: `this.type.box.units.length === 12` }
-//     Product.find(queryBoxWithNumItems)
-//         .populate('type.box.units')
-//         .then(boxTokkes => {
-//             res.render('buy/boxes/boxLove/index', { boxTokkes: boxTokkes[0].type.box.units })
-//         })
-// })
-
-
-
-// module.exports = app
-
-
-
-// const queryAreSingle = { "type.single": { $exists: true } }
-
-/**** JSON ******/
-
-// app.get('/tokkes/json', (req,res) => {
-//     Product.find(queryAreSellingSingle)
-//   .exec(function(error, tokkes) {
-//           res.json( tokkes )
-//     })
-// })
-
-
-// const queryAreBoxes = { "type.single": { $exists: false } }
-// app.get('/json', (req,res) => {
-//     Product.find( queryAreBoxes )
-//       .populate('type.box.units')
-//       .find( queryAreSingle )
-//       .exec(function(error, boxTokkes) {
-//           res.json( boxTokkes )
-//       })
-// })
-
-// app.get('/box/json/:numItems', (req,res) => {
-//     const { numItems } = req.params
-//     const queryBoxWithNumItems =  { $where: `this.type.box.units.length === ${numItems}` }
-//     console.log(queryBoxWithNumItems)
-//     Product.find( queryBoxWithNumItems )
-//       .populate('type.box.units')
-//       .exec(function(error, boxTokkes) {
-//           res.json( boxTokkes[0].type.box.units )
-//       })
-// })

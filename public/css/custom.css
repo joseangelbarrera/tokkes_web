@@ -1,17 +1,16 @@
 /***************************
-Add your custom styles below
+       Custom styles
 ****************************/
 
-
-/** {
-    border: 1px solid red;
+.bg--primary {
+    background: rgb(72, 102, 117);
 }
-*/
+
 .regsiterField {
     position: relative;
     min-height: 1px;
-padding-left: 0px;
-padding-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .input-without-icon input {
@@ -26,15 +25,13 @@ padding-right: 0px;
     margin-bottom: 20px;
 }
 
-
-div.nav-module.right{
+div.nav-module.right {
     width: 300px;
 }
 
-
 @media (max-width: 768px) {
     .decor {
-     display: none;
+        display: none;
     }
 }
 
@@ -42,7 +39,9 @@ ul.bullets {
     list-style: circle;
 }
 
-#phoneModel_input, #phoneBrand_input, #phoneBrand_button{
+#phoneModel_input,
+#phoneBrand_input,
+#phoneBrand_button {
     display: inline-block;
     flex: 0 1 auto;
     flex-wrap: wrap;
@@ -50,37 +49,35 @@ ul.bullets {
     margin-bottom: 0px;
 }
 
-#margin-cero, #margin-cero-1, #margin-cero-2, #margin-cero-3 {
+#margin-cero,
+#margin-cero-1,
+#margin-cero-2,
+#margin-cero-3 {
     margin-bottom: 0px;
 }
 
 #margin-cero-2 {
-   padding-bottom: 2em;
+    padding-bottom: 2em;
 }
 
-#margin-cero-3, #margin-cero-4 {
-       padding-bottom: 1em;
-   padding-bottom: 2em;
+#margin-cero-3,
+#margin-cero-4 {
+    padding-bottom: 1em;
+    padding-bottom: 2em;
 }
-
-
 
 #margin-cero-5 {
-       padding-bottom: -3em;
-  margin-bottom: -5em;
+    padding-bottom: -3em;
+    margin-bottom: -5em;
 }
-
-
 
 #margin-forty {
     margin-bottom: 40px;
 }
 
-
 section.search {
-        padding-top: 3em;
-     padding-bottom: 1em;
-
+    padding-top: 3em;
+    padding-bottom: 1em;
 }
 
 #phone-search {
@@ -89,11 +86,10 @@ section.search {
 }
 
 #phone-list {
-        display: flex;
+    display: flex;
     justify-content: center;
     width: 100%
 }
-
 
 #close-modal {
     border-color: #adaba1;
@@ -109,49 +105,53 @@ section.search {
     border: darkgrey;
 }
 
-
-
 .colorBlue {
     background: blue;
 }
+
 .colorGreen {
     background: green;
 }
+
 #QuestionOptionsTwo {
     margin-bottom: 20px;
 }
+
 .but_pad_0 {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+
 .shadow_price:hover {
     box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25);
 }
+
 .btn--primary.btn:hover {
     background-color: RoyalBlue;
     border-color: RoyalBlue;
-
 }
+
 section.short-padding {
     padding-top: 2em;
     padding-bottom: 0.125em;
 }
+
 .boxed {
     position: relative;
     overflow: hidden;
     padding: 2.4375em;
     margin-bottom: 0px;
 }
+
 .modal-instance {
     position: relative;
     display: block;
-
 }
 
-
-.gray-background{
-    background-image: linear-gradient(#e7e8e8,  #f8f8f8 90%, white);
+.gray-background {
+    background-image: linear-gradient(#e7e8e8, #f8f8f8 90%, white);
 }
+
 @media all and (max-width: 767px) {
     .square-litle {
         text-align: center;
@@ -164,35 +164,27 @@ section.short-padding {
     }
 }
 
-
 @media all and (max-width: 767px) {
     #tokke-modal-2 {
         display: none;
     }
 }
 
-
-
 square-litle {
     width: 70px;
-    height: 70px; 
+    height: 70px;
 }
 
 .header-config {
-display: inline-flex;
-text-align: left;
+    display: inline-flex;
+    text-align: left;
     align-items: center;
-    vertical-align: center
-    justify-content: center;
+    vertical-align: center justify-content: center;
     align-content: center;
     margin-top: -20px;
     margin-bottom: -20px;
-
 }
 
-/*.btn + .btn {
-    margin-left: 0px;
-}*/
 select,
 option {
     background: white;
@@ -202,11 +194,8 @@ option {
     border-color: #284e9a;
     font-family: arial;
     padding-right: 15px;
-        margin-bottom: 20px
+    margin-bottom: 20px
 }
-
-
-
 
 #originPhone,
 #destinyPhone,
@@ -222,39 +211,46 @@ option {
     margin-top: 0px;
     margin-bottom: 0px;
 }
+
 .smartphone-4:before {
     content: "\ea90";
 }
+
 .input-with-icon label + i {
     top: 66px;
 }
 
+
 /* For mobile phones: */
+
 @media (max-width: 400px) {
     .input-with-icon label + i {
         top: 58px;
     }
 }
+
 @media (max-width: 700px) {
     .input-with-icon label + i {
         top: 58px;
     }
 }
+
 @media (max-width: 950px) {
     .input-with-icon label + i {
         top: 63px;
     }
 }
+
 .second_action {
     padding-top: 20px;
 }
+
 .btn-danger {
     color: #ffffff;
     background-color: #d9534f;
     border-color: #d43f3a;
     border-color: #e0a70c
 }
-
 
 #border-radius-active-1 {
     margin-bottom: 8px;
@@ -265,20 +261,18 @@ option {
     color: white;
 }
 
-
 #config_button0 {
     margin-left: 0px;
     color: white !important;
-         padding-right: 0em; 
-     padding-left: 0em; 
+    padding-right: 0em;
+    padding-left: 0em;
 }
 
 #config_button0:hover {
-      color: white;
+    color: white;
     margin-left: 0px;
     border-color: #1f88be;
 }
-
 
 #config_button {
     display: flex;
@@ -287,14 +281,15 @@ option {
     flex-shrink: 1;
     align-items: stretch;
 }
+
 #config_button_1 {
     background: #e7e7e7;
     flex-grow: 1;
     color: grey;
     border: 0px;
     width: 50%;
-             padding-right: 0em; 
-     padding-left: 0em; 
+    padding-right: 0em;
+    padding-left: 0em;
 }
 
 #config_button_2 {
@@ -303,11 +298,9 @@ option {
     color: grey;
     border: 0px;
     width: 50%;
-             padding-right: 0em; 
-     padding-left: 0em; 
+    padding-right: 0em;
+    padding-left: 0em;
 }
-
-
 
 #config_button_3 {
     background: #97c57e;
@@ -315,11 +308,10 @@ option {
     color: #2e5916;
     border: 0px;
     width: 50%;
-        margin-top: 0px;
-                 padding-right: 0em; 
-     padding-left: 0em; 
+    margin-top: 0px;
+    padding-right: 0em;
+    padding-left: 0em;
 }
-
 
 #config_button_4 {
     background: #97c57e;
@@ -327,9 +319,9 @@ option {
     color: #2e5916;
     border: 0px;
     width: 50%;
-        margin-top: 0px;
-                 padding-right: 0em; 
-     padding-left: 0em; 
+    margin-top: 0px;
+    padding-right: 0em;
+    padding-left: 0em;
 }
 
 #config_button_1:hover {
@@ -348,13 +340,13 @@ option {
     background: #6da251;
 }
 
-
 @media all and (max-width: 767px) {
     #config_button_2 {
         margin-left: 0;
         margin-top: 0px;
     }
 }
+
 p.short_margin {
     margin-bottom: 10px;
 }
@@ -364,15 +356,18 @@ div.sheets {
     display: flex;
     align-items: stretch;
 }
+
 div.short_margin {
     margin: 0px;
 }
+
 section.short_margin {
     display: none;
 }
+
 section.short_margin_visible {
     margin-top: 2em;
-        margin-bottom: 40px;
+    margin-bottom: 40px;
     padding-bottom: 2.25em;
     margin: 0px;
     color: #d27373;
@@ -381,7 +376,6 @@ section.short_margin_visible {
 @media (min-width: 1200px) {
     section.short_margin_black {
         display: block;
-
         padding-bottom: 2.25em;
         margin: 0px;
     }
@@ -399,10 +393,7 @@ section.short_margin_visible {
 
 @media (min-width: 750px) {
     div.box-header {
-         width: 100%;
-    height: 350px;
+        width: 100%;
+        height: 350px;
     }
 }
-
-
-

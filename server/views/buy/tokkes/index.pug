@@ -9,7 +9,6 @@ block content
 				.container.sheets
 					each tokke in tokkes 
 						include includes/singleTokke.pug
-
 			section
 				.container.pos-vertical-center
 					.col-sm-10.col-sm-offset-1.text-center
@@ -17,7 +16,7 @@ block content
 							| Configura los Tøkkes a tu gusto. Puedes añadir tantos Tøkkes como desees y borrar los que no quieras.
 							| Al finalizar de configurarlos haz la preorden.
 						|
-						a.btn(href="shop-cart-tokkes.html")
+						a.btn(href="/thanks")
 							span.btn__text PREORDENAR TØKKES
 		#only-once.modal-container(data-autoshow=(cartItems > 0 ? false : true ))
 			.modal-content.height--natural
