@@ -26,20 +26,6 @@ $('#config_button_1').on('click', function(e) {
 })
 
 
-$(document).ready(function() {
-    setTimeout(function() {
-        if (!Cookies.get('modalShown')) {
-            $("#only-once").modal('show');
-            Cookies.set('modalShown', true);
-        } else {
-            console.log('Your modal won\'t show again as it\'s shown before.');
-        }
-
-    }, 3000);
-});
-
-
-
 $('#phoneBrand_button').on('click', function(e) {
     e.preventDefault()
     var queryModelPhone = $('#phoneModel_input').val();
@@ -60,16 +46,17 @@ $('#phoneBrand_button').on('click', function(e) {
                 const deviceBrand = phoneName.Brand.toLowerCase()
                 if (phoneName.nfc === 'Yes' || phoneName.nfc === 'NFC') {
                     haveNFC += '<li>' + phoneName.DeviceName + ' del año ' + phoneName.announced.substr(0, 4) + ' SI es compatible con Tøkkes </li>'
-                } else if (phoneName.nfc !== 'NFC' || phoneName.nfc !== 'Yes') {
-                    noHaveNFC += '<li>' + phoneName.DeviceName + ' del año ' + phoneName.announced.substr(0, 4) + ', no es compatible con Tøkkes </li>'
+                } else if (phoneName.nfc === 'undefined') {
+                    noHaveNFC += '<li>' + phoneName.DeviceName + ' del año ' + phoneName.announced.substr(0, 4) + ', es incompatible con Tøkkes </li>'
+
+                } else if (deviceBrand === 'Apple' || deviceName === 'Iphone') {
+                    '<li> Los nuevos dispositovos Apple son compatibles a partir de la version IOS 11 </li>'
 
                 } else {
-                    noHaveNFC += '<li> Su elección no devuelve resultados. Por favor sea más específico en su búsqeda.</li>'
+                    '<li> Su elección no devuelve resultados. Por favor sea más específico en su búsqeda.</li>'
                 }
-                $("#list-phone-group").html('<h5 class="text-center"> Estos son los teléfonos compatibles que coinciden con su búsqueda:</h5>' + haveNFC)
+                $("#list-phone-group").html('<h5 class="text-center"> Los nuevos dispositovos Apple son compatibles a partir de la version IOS 11.</h5>' + haveNFC)
                 console.log(deviceBrand)
-
-
             })
         }
     })

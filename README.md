@@ -8,16 +8,18 @@ Tøkkes is perfect to add a bit more of security in homes worldwide. Tøkkes is 
 
 The main idea of this app is to provide an environment where anyone could set up the NFC tags, and order their own customized Tøkkes.
 
-## Tøkkes app
+## Tøkkes app 💛
 
 ![header](public/img/logs_dependencies.png)
 
-## Installation
+## Installation 🔥
 
  We asume we have installed node, mongoDB and nodemon in our computer. Otherwise, install this packages.
 
 https://nodejs.org/es/
+
 https://nodemon.io/
+
 https://www.mongodb.com/
 
 * ### .env file configuration:
@@ -40,10 +42,12 @@ In order to know  your device NFC compatibility, our app works with **fonoapi**,
 
 https://github.com/mtrung/fonoapi
 
-It is necesary a token: \*\*\*\*\*\*\*\*\*\*. you can adquire yours in this url: https://fonoapi.freshpixl.com/
+It is necesary a token: \*\*\*\*\*\*\*\*\*\*. you can adquire yours in this url:
+
+https://fonoapi.freshpixl.com/
 
 
-## Built with:
+## Built with: 💻
 
 * SublimeText
 
@@ -63,8 +67,12 @@ It is necesary a token: \*\*\*\*\*\*\*\*\*\*. you can adquire yours in this url:
 * mongoose: 4.9.0
 * body-parser: 1.17.1
 * nodemon: 1.11.0
-* * session-file-store: 1.0.0
+* session-file-store: 1.0.0
 
 ## Autor
 
-José Ángel Barrera
+[José Ángel Barrera](https://github.com/joseangelbarrera)
+
+## Many thanks to
+
+All people I meet (teachers included) in [Skylab Coders Academy](http://www.skylabcoders.com/en)  😀
