@@ -1,45 +1,11 @@
-$('#config_button_3').click(function() {
-  alert( "Configuración salvada correctamente, contiunua configurando tus Tøkkes."; )
+$('#config_button_3').on('click', function() {
+  alert( "Configuración salvada correctamente, continua configurando tus Tøkkes.")
 });
 
 
-$("#config_button_3").on('click', function(){
-  console.log('click boton 3')
-    $(".tokkeImage").attr("src",tokke.imageLow);
+$('#config_button_4').on('click', function() {
+  alert( "Configuración salvada correctamente, continua configurando tus Tøkkes.")
 });
-
-$("#config_button_4").click(function(){
-        $(".tokkeImage").attr("src",tokke.imageLow);
-    });
-
-
-// $('#config_button_4').click(function() {
-//   alert( "Configuración salvada correctamente, contiunua configurando tus Tøkkes." );
-// });
-
-// $('#config_button_1').remove('#config_button_1') {
-
-// $('#config_button_1').click(function() {
-//   alert( "Tokke borrado correctamente, contiunua configurando tus Tøkkes." );
-// });
-
-// $('#config_button_1').click(function() {
-//   alert( "Tokke borrado correctamente, contiunua configurando tus Tøkkes." );
-// });
-
-
-// $('.#config_button_1').on('click', function(e) {
-//   e.preventDefault();
-//   const $thisElement = $(this)
-//   const url = $thisElement.attr("href")
-//   const method = 'DELETE'
-//   $.ajax({ url, method })
-//     .done( response => {
-//       toastr.success(response)
-//       $thisElement.parents('.list-group-item').remove()
-//     })
-//     .fail( () =>  alert("Try removing again champ!") );
-// })
 
 
 $('#config_button_1').on('click', function(e) {
@@ -108,50 +74,6 @@ $('#phoneBrand_button').on('click', function(e) {
         }
     })
 })
-
-
-
-
-
-
-
-// var $testingQuestion = $('select.questionoptionsred').data("questionoptionsred");
-// var $testingAnswer = $('div.myanswersred').data("myanswersred");
-
-// console.log( $testingQuestion)
-// console.log($testingAnswer)
-
-
-// $(function() {
-//  $('#'+ $testingQuestion).change(function() {
-//    $('#' + $testingAnswer + '> div').hide();
-//    $('#' + $testingAnswer).find('#' + $(this).val()).show();
-//    console.log(this)
-//  });
-// });
-
-
-// var $testingQuestion = $('select.questionoptionsred').data("questionoptionsred");
-
-// composition = function(){
-//  var idSelected = "'" + '#'+ $testingQuestion + "'"
-//  return idSelected.toString()
-// }
-
-// console.log(composition())
-
-// this works but it is the same for all tokkes cards
-
-
-// quiero alcanzar al select con id del tokke que me interesa
-
-// $(function() {
-//  $('#questionoptions').change(function() {
-//    $('#myanswers > div').hide();
-//    $('#myanswers').find('#' + $(this).val()).show();
-//    console.log(this)
-//  });
-// });
 
 //  $('#questionoptions').change(function() {
 //    $('#myanswers > div').hide();
